@@ -1,0 +1,51 @@
+
+#gamepanel{
+	margin-left:320px;
+	margin-right:32px;
+}
+
+#leftnav{
+	width:256px;
+	margin-left:32px;
+	position:absolute;
+	border:1px #C0C0C0 dashed;
+}
+
+.page-header{
+	margin-left:32px;
+	margin-right:32px;
+}
+
+.header_thumb{
+	margin-left:16px;
+}
+
+
+#infotable{
+	width:35%;
+	margin:0px;
+}
+#infotable td:first_of_type{
+	width:40%;
+}
+
+
+
+#game_thumbs{
+	width:16%;
+	height:100%;
+	float:right;
+}
+
+#game_picture{
+	width:84%;
+	float:left;
+}
+
+#game_artthumb{
+	margin:0px;
+}
+
+#pictureholder{
+	width:35%;
+}
