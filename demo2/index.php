@@ -24,6 +24,7 @@
     <!-- Bootstrap -->
     <link href="<?= $css ?>" rel="stylesheet">
 	<link href="nes.css" rel="stylesheet">
+	<link href="magpopup/magnific-popup.css" rel="stylesheet">
 
   </head>
   
@@ -131,66 +132,111 @@
 		</div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
-  
-	<div class="page-header">
-		<h3>NES Games <small>Super Mario Bros. 3</small><img class="header_thumb" src="assets/img/nes_thumb_supermariobros3.png"/></h3>
-	</div>
+	
+	<ol class="breadcrumb">
+		<li><a href="#">Dashboard</a></li>
+		<li><a href="#">Library</a></li>
+		<li><a href="#">NES</a></li>
+		<li class="active">Super Mario Bros.3</li>
+	</ol>
   
 	<ul class="nav nav-pills nav-stacked" id="leftnav">
 		<li><a href="#">Thing</a></li>
 		<li><a href="#">Stuff</a></li>
 		<li><a href="#">Messages</a></li>
 	</ul>
+	
   
     <div class="panel panel-default" id="gamepanel">
 		
 		<div class="panel-body">
-			<div id="pictureholder">
-				<div id="game_picture">
-					<a class="thumbnail" href="assets/img/nes_supermariobros3.jpg">
-						<img src="assets/img/nes_supermariobros3.jpg"/>
-					</a>
+			<div>
+			<div id="info">
+				<div id="pictureholder">
+					<div id="game_picture">
+						<a class="thumbnail" href="assets/img/nes_supermariobros3.jpg" title="Super Mario Bros.3 Box Art">
+							<img src="assets/img/nes_supermariobros3.jpg"/>
+						</a>
+					</div>
+					<div id="game_thumbs" class="yoxview">
+						<a class="thumbnail" href="assets/img/nes_cart_supermariobros3.jpg" id="game_artthumb" title="Super Mario Bros.3 Cartridge">
+							<img src="assets/img/nes_cart_supermariobros3.jpg" alt="Super Mario Bros.3 Cartridge"/>
+						</a>
+						<a class="thumbnail" href="assets/img/nes_menu_supermariobros3.jpg" id="game_artthumb" title="Super Mario Bros.3 Menu">
+							<img src="assets/img/nes_menu_supermariobros3.jpg"/>
+						</a>
+						<a class="thumbnail" href="assets/img/nes_game_supermariobros3.jpg" id="game_artthumb" title="Super Mario Bros.3 Gameplay">
+							<img src="assets/img/nes_game_supermariobros3.jpg"/>
+						</a>
+					</div>
 				</div>
-				<div id="game_thumbs">
-					<a class="thumbnail" href="assets/img/nes_cart_supermariobros3.jpg" id="game_artthumb">
-						<img src="assets/img/nes_cart_supermariobros3.jpg"/>
-					</a>
-					<a class="thumbnail" href="assets/img/nes_menu_supermariobros3.jpg" id="game_artthumb">
-						<img src="assets/img/nes_menu_supermariobros3.jpg"/>
-					</a>
-					<a class="thumbnail" href="assets/img/nes_game_supermariobros3.jpg" id="game_artthumb">
-						<img src="assets/img/nes_game_supermariobros3.jpg"/>
-					</a>
+				<div id="infotable">
+					<table class="table table-striped">
+						<tr class="tableheader">
+							<td colspan="2">Development</td>
+						<tr>
+							<td>Developer</td>
+							<td>Nintendo R&D4</td>
+						</tr>
+						<tr>
+							<td>Publisher</td>
+							<td>Nintendo</td>
+						</tr>
+						<tr>
+							<td>Producer</td>
+							<td>Shigeru Miyamoto</td>
+						</tr>
+						<tr>
+							<td>Series</td>
+							<td>Super Mario</td>
+						</tr>
+					</table>
 				</div>
-			</div>
-			<div id="infotable">
-				<table class="table table-striped">
-					<tr>
-						<td>Developer</td>
-						<td>Nintendo R&D4</td>
-					</tr>
-					<tr>
-						<td>Publisher</td>
-						<td>Nintendo</td>
-					</tr>
-					<tr>
-						<td>Producer</td>
-						<td>Shigeru Miyamoto</td>
-					</tr>
-					<tr>
-						<td>Series</td>
-						<td>Super Mario</td>
-					</tr>
-				</table>
 			</div>
 		</div>
+		<div id="reader">
+			<div class="page-header">
+				<h3>NES Games <small>Super Mario Bros. 3</small><img class="header_thumb" src="assets/img/nes_thumb_supermariobros3.png"/></h3>
+			</div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas feugiat vel leo non venenatis. Nullam eu fringilla mi, non ultricies nisl. Nam iaculis, purus ut facilisis consectetur, ipsum ligula fringilla dolor, eget porttitor diam odio quis eros. Etiam pellentesque quis quam id venenatis. Duis ultrices vehicula leo, a convallis magna. Vivamus eu pellentesque elit. Mauris auctor congue pellentesque. Donec lacinia diam sed rhoncus laoreet. In commodo dui a aliquam tristique. Pellentesque elementum orci non laoreet rhoncus. Sed libero diam, ornare eget mi in, rhoncus venenatis augue. Nam vulputate arcu sed felis tempor tempus. Vestibulum libero libero, convallis vitae magna eget, mattis tincidunt dolor. Integer erat nisi, varius vitae nunc eu, vestibulum ullamcorper metus.
+				Morbi vel sagittis felis, vel cursus mauris. Fusce molestie tellus ante, mattis congue enim varius sed. Curabitur dictum ultricies magna a aliquet. Etiam condimentum lobortis egestas. Nam urna turpis, ullamcorper sed elit eu, elementum vehicula nibh. Cras feugiat pretium quam eget facilisis. Ut eget eros non quam viverra fermentum at sit amet purus.
+				In eget orci interdum, dignissim ipsum at, venenatis leo. Nulla sed odio placerat, ultrices nulla eget, venenatis tortor. Fusce quis tincidunt ante, pellentesque feugiat est. Donec semper erat ac lobortis dictum. Mauris vel eros non sapien ullamcorper dictum eget ut nibh. Proin tempor erat nibh, sit amet vestibulum nisi sagittis id. Donec id risus vitae enim pharetra mollis et non leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+				Aenean eu commodo sapien, eget egestas metus. Aliquam accumsan, mauris sit amet placerat hendrerit, justo lacus gravida ipsum, vel sodales orci purus id nisi. Fusce eu ligula ac diam porta semper sed eu nibh. Curabitur diam arcu, congue nec hendrerit venenatis, imperdiet a lacus. Donec ut libero sollicitudin, egestas magna a, hendrerit diam. Cras placerat neque in eros elementum feugiat. Sed elementum sollicitudin magna eget semper. In turpis risus, lobortis sit amet adipiscing quis, suscipit ut enim. Nulla hendrerit nibh nec consectetur lobortis. Duis turpis purus, sagittis sit amet ligula ut, pretium euismod lacus. Donec sit amet sapien mauris. In vitae quam dignissim, viverra dolor id, scelerisque quam.
+			</p>
+		</div>
+		</div>
 	<div>
-	
 	
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="assets/js/jquery-2.0.3.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="assets/js/bootstrap.min.js"></script>
+	
+	<script src="magpopup/jquery.magnific-popup.min.js"></script>
+	
+	<script>
+		$('#pictureholder').magnificPopup({
+			delegate: 'a', // child items selector, by clicking on it popup will open
+			type: 'image',
+			 zoom: {
+				enabled: true, // By default it's false, so don't forget to enable it
+
+				duration: 300, // duration of the effect, in milliseconds
+				easing: 'ease-in-out', // CSS transition easing function 
+
+				// The "opener" function should return the element from which popup will be zoomed in
+				// and to which popup will be scaled down
+				// By defailt it looks for an image tag:
+				opener: function(openerElement) {
+					// openerElement is the element on which popup was initialized, in this case its <a> tag
+					// you don't need to add "opener" option if this code matches your needs, it's defailt one.
+					return openerElement.is('img') ? openerElement : openerElement.find('img');
+				}			
+			},
+			gallery:{enabled:true},
+			titleSrc: 'title',
+		});
+	</script>
 	
   </body>
 </html>

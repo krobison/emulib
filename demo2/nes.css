@@ -12,19 +12,14 @@
 }
 
 .page-header{
-	margin-left:32px;
-	margin-right:32px;
+	margin-top:0px;
+	margin-right:16px;
 }
 
 .header_thumb{
 	margin-left:16px;
 }
 
-
-#infotable{
-	width:35%;
-	margin:0px;
-}
 #infotable td:first_of_type{
 	width:40%;
 }
@@ -46,6 +41,23 @@
 	margin:0px;
 }
 
-#pictureholder{
+#info{
 	width:35%;
+	float:right;
+}
+
+#reader{
+	width:65%;
+	position:relative;
+	float:left;
+}
+
+.breadcrumb{
+	margin-left:32px;
+	margin-right:32px;
+}
+
+.tableheader{
+	text-align:center;
+	border:2px rgba(0,0,0,0.1) solid;
 }
