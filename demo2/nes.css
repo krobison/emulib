@@ -24,6 +24,11 @@
 	width:40%;
 }
 
+#infotable,#ratingtable,#safetytable tr{
+	border-left:1px rgba(0,0,0,0.1) solid;
+	border-right:1px rgba(0,0,0,0.1) solid;
+	border-bottom:1px rgba(0,0,0,0.1) solid;
+}
 
 
 #game_thumbs{
@@ -59,5 +64,44 @@
 
 .tableheader{
 	text-align:center;
-	border:2px rgba(0,0,0,0.1) solid;
+}
+
+#buttonholder{
+	float:right;
+	margin-right:16px;
+	margin-top:16px;
+}
+
+.bodytext{
+	margin-right:16px;
+}
+
+.flag{
+	width:32px;
+	margin-top:-6px;
+}
+
+#ratingtable{
+	text-align:center;
+	width:45%;
+	float:left;
+}
+
+#safetytable{
+	text-align:center;
+	width:45%;
+	margin-right:16px;
+	float:right;
+}
+
+#ratingsection{
+	min-height:250px;
+}
+
+.ratings{
+	height:64px;
+}
+
+#screenthumb{
+	width:128px;
 }
