@@ -1,4 +1,8 @@
 
+body{
+	min-width:1216px;
+}
+
 #gamepanel{
 	margin-left:320px;
 	margin-right:32px;
@@ -29,7 +33,6 @@
 	border-right:1px rgba(0,0,0,0.1) solid;
 	border-bottom:1px rgba(0,0,0,0.1) solid;
 }
-
 
 #game_thumbs{
 	width:16%;
@@ -79,6 +82,9 @@
 .flag{
 	width:32px;
 	margin-top:-6px;
+	float:left;
+	margin-left:8px;
+	margin-right:8px;
 }
 
 #ratingtable{
@@ -104,4 +110,14 @@
 
 #screenthumb{
 	width:128px;
+	height:128px;
+	margin:0px;
+}
+
+.goodRating{
+	color:#00C000;
+}
+#screens{
+	width:100%;
+	display:inline-block;
 }

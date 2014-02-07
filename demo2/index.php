@@ -24,8 +24,10 @@
     <!-- Bootstrap -->
     <link href="<?= $css ?>" rel="stylesheet">
 	<link href="nes.css" rel="stylesheet">
+	
 	<link href="magpopup/magnific-popup.css" rel="stylesheet">
-
+	<link type="text/css" href="jplayer/skins/blue.monday/jplayer.blue.monday.css" rel="stylesheet" />
+	
   </head>
   
   <body>
@@ -137,14 +139,16 @@
 		<li><a href="#">Dashboard</a></li>
 		<li><a href="#">Library</a></li>
 		<li><a href="#">NES</a></li>
-		<li class="active">Super Mario Bros.3</li>
+		<li class="active">Super Mario Bros. 3</li>
 	</ol>
   
-	<ul class="nav nav-pills nav-stacked" id="leftnav">
-		<li><a href="#">Thing</a></li>
-		<li><a href="#">Stuff</a></li>
-		<li><a href="#">Messages</a></li>
-	</ul>
+	<div id="affixleft" data-spy="affix" data-offset-top="0">
+		<ul class="nav nav-pills nav-stacked" id="leftnav">
+			<li><a href="#">Thing</a></li>
+			<li><a href="#">Stuff</a></li>
+			<li><a href="#">Messages</a></li>
+		</ul>
+	</div>
 	
   
     <div class="panel panel-default" id="gamepanel">
@@ -245,19 +249,19 @@
 							</tr>
 							<tr>
 								<td>Allgame</td>
-								<td>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+								<td class="goodRating">&#9733;&#9733;&#9733;&#9733;&#9733;</td>
 							</tr>
 							<tr>
 								<td>Gamespot</td>
-								<td>9.0/10</td>
+								<td class="goodRating">9.0/10</td>
 							</tr>
 							<tr>
 								<td>IGN</td>
-								<td>9.5/10</td>
+								<td class="goodRating">9.5/10</td>
 							</tr>
 							<tr>
 								<td>The Video Game Critic</td>
-								<td>A+</td>
+								<td class="goodRating">A+</td>
 							</tr>
 						</table>
 					</div>
@@ -285,20 +289,101 @@
 					<h4>Screenshots</h4>
 				</div>
 				<div id="screens">
-					<a class="thumbnail" href="assets/img/nes_screen_supermariobros3_1.jpg" id="screenthumb" title="Super Mario Bros.3 W1-L2">
-						<img src="assets/img/nes_screen_supermariobros3_1.jpg"/>
-					</a>
+					<div class="col-xs-6 col-md-2">
+						<a class="thumbnail" href="assets/img/nes_screen_supermariobros3_1.jpg" id="screenthumb" title="Mario on an Airship">
+							<img src="assets/img/nes_screen_supermariobros3_1.jpg"/>
+						</a>
+					</div>
+					<div class="col-xs-6 col-md-2">
+						<a class="thumbnail" href="assets/img/nes_screen_supermariobros3_2.jpg" id="screenthumb" title="Super Mario Bros.3 W1-L3">
+							<img src="assets/img/nes_screen_supermariobros3_2.jpg"/>
+						</a>
+					</div>
+					<div class="col-xs-6 col-md-2">
+						<a class="thumbnail" href="assets/img/nes_screen_supermariobros3_3.jpg" id="screenthumb" title="Mario in the Desert">
+							<img src="assets/img/nes_screen_supermariobros3_3.jpg"/>
+						</a>
+					</div>
+					<div class="col-xs-6 col-md-2">
+						<a class="thumbnail" href="assets/img/nes_screen_supermariobros3_4.jpg" id="screenthumb" title="Big World">
+							<img src="assets/img/nes_screen_supermariobros3_4.jpg"/>
+						</a>
+					</div>
+					<div class="col-xs-6 col-md-2">
+						<a class="thumbnail" href="assets/img/nes_screen_supermariobros3_5.jpg" id="screenthumb" title="High in the sky">
+							<img src="assets/img/nes_screen_supermariobros3_5.jpg"/>
+						</a>
+					</div>
+					<div class="col-xs-6 col-md-2">
+						<a class="thumbnail" href="assets/img/nes_screen_supermariobros3_6.jpg" id="screenthumb" title="Frog Suit">
+							<img src="assets/img/nes_screen_supermariobros3_6.jpg"/>
+						</a>
+					</div>
+					<div class="col-xs-6 col-md-2">
+						<a class="thumbnail" href="assets/img/nes_screen_supermariobros3_7.jpg" id="screenthumb" title="World 8">
+							<img src="assets/img/nes_screen_supermariobros3_7.jpg"/>
+						</a>
+					</div>
 				</div>
+				<br><br>
+				<div class="page-header">
+					<h4>Sound</h4>
+				</div>
+				
+				
+				<!--start of player-->
+				<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+				<div id="jp_container_1" class="jp-audio">
+					<div class="jp-type-single">
+						<div class="jp-gui jp-interface">
+							<ul class="jp-controls">
+								<li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+								<li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+								<li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
+								<li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+								<li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+								<li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+							</ul>
+							<div class="jp-progress">
+								<div class="jp-seek-bar">
+									<div class="jp-play-bar"></div>
+								</div>
+							</div>
+							<div class="jp-volume-bar">
+								<div class="jp-volume-bar-value"></div>
+							</div>
+							<div class="jp-time-holder">
+							<div class="jp-current-time"></div>
+							<div class="jp-duration"></div>
+								<ul class="jp-toggles">
+									<li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
+									<li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
+								</ul>
+							</div>
+						</div>
+							<div class="jp-title">
+								<ul>
+									<li>Super Mario Bros. 3 - Overworld</li>
+								</ul>
+							</div>
+							<div class="jp-no-solution">
+								<span>Update Required</span>
+									To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+							</div>
+					</div>
+				</div>
+				<!--end of player-->
 			</div>
 		</div>
 	<div>
 	
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="assets/js/jquery-2.0.3.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="assets/js/bootstrap.min.js"></script>
 	
 	<script src="magpopup/jquery.magnific-popup.min.js"></script>
+	<script type="text/javascript" src="jplayer/jquery.jplayer.js"></script>
 	
 	<script>
 		$('#pictureholder').magnificPopup({
@@ -343,6 +428,29 @@
 			gallery:{enabled:true},
 			titleSrc: 'title',
 		});
+		
+		
+		$('#affixleft').affix({
+			offset: {
+				top: 0,
+		 		bottom: function () {
+					return (this.bottom = $('.bs-footer').outerHeight(true))
+				}
+			}
+		})
+		
+		$(document).ready(function(){
+			$("#jquery_jplayer_1").jPlayer({
+				ready: function () {
+				$(this).jPlayer("setMedia", {
+					mp3: "sound/nes_supermariobros3_1.mp3",
+				});
+			},
+			swfPath: "jplayer",
+			supplied: "mp3"
+			});
+		});
+
 	</script>
 	
 	</body>
