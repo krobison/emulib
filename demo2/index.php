@@ -203,7 +203,7 @@
 							<td>October 23, 1988</td>
 						</tr>
 						<tr>
-							<td>North America&nbsp;&nbsp;<img class="flag" src="assets/img/flag_usa.png"/></td>
+							<td>North America&nbsp;&nbsp;<img class="flag" src="assets/img/flag_USA.png"/></td>
 							<td>February 12, 1990</td>
 						</tr>
 						<tr>
