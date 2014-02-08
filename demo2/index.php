@@ -52,12 +52,13 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-				<li><a href="#"><span class="glyphicon glyphicon-comment"></span> News</a></li>
-				<li><a href="#"><span class="glyphicon glyphicon-question-sign"></span> About</a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Home</a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-comment"></span>&nbsp;&nbsp;News</a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;Browse</a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-question-sign"></span>&nbsp;&nbsp;About</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#"><span class="glyphicon glyphicon-user"></span> Dashboard</a></li>
+				<li class="active"><a href="#"><span class="glyphicon glyphicon-user"></span> Kolten Robison</a></li>
 				<form class="navbar-form navbar-left" role="search">
 					<div class="form-group input-group-sm">
 						<input type="text" class="form-control" placeholder="Search" style="width:256px;margin-top:4px;">
@@ -144,9 +145,9 @@
   
 	<div id="affixleft" data-spy="affix" data-offset-top="0">
 		<ul class="nav nav-pills nav-stacked" id="leftnav">
-			<li><a href="#">Thing</a></li>
-			<li><a href="#">Stuff</a></li>
-			<li><a href="#">Messages</a></li>
+			<li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Dashboard</a></li>
+			<li><a href="library.php?theme=<?=$theme?>&navbar=<?=$navbar?>"><span class="glyphicon glyphicon-book"></span>&nbsp;&nbsp;Library</a></li>
+			<li><a href="#"><span class="glyphicon glyphicon-comment"></span>&nbsp;&nbsp;Messages</a></li>
 		</ul>
 	</div>
 	
@@ -274,19 +275,21 @@
 					<div id="safetytable">
 						<table class="table">
 							<tr class="tableheader active">
-								<td colspan="4">Content Ratings</td>
+								<td colspan="6">Content Ratings</td>
 							</tr>
 							<tr>
 								<td>ESRB</td>
 								<td><img class="ratings" src="assets/img/esrb_e.png"/></td>
 								<td>PEGI</td>
 								<td><img class="ratings" src="assets/img/pegi_3.png"/></td>
-							</tr>
-							<tr>
 								<td>CERO</td>
 								<td><img class="ratings" src="assets/img/cero_a.png"/></td>
+							</tr>
+							<tr>
 								<td>ACB</td>
 								<td><img class="ratings" src="assets/img/acb_g.png"/></td>
+								<td>USK</td>
+								<td><img class="ratings" src="assets/img/usk_0.png"/></td>
 							</tr>
 						</table>
 					</div>
@@ -340,7 +343,7 @@
 						</div>
 					</div>
 					<div class="media">
-						<a class="pull-left" href="assets/img/nes_screen_supermariobros3_3.jpg">
+						<a class="pull-left" href="assets/img/nes_screen_supermariobros3_2.jpg">
 							<img class="media-object" src="assets/img/nes_screen_supermariobros3_3.jpg" alt="Mario in the Desert" title="Mario in the Desert">
 						</a>
 						<div class="media-body">
@@ -349,7 +352,7 @@
 						</div>
 					</div>
 					<div class="media">
-						<a class="pull-left" href="assets/img/nes_screen_supermariobros3_6.jpg">
+						<a class="pull-left" href="assets/img/nes_screen_supermariobros3_3.jpg">
 							<img class="media-object" src="assets/img/nes_screen_supermariobros3_6.jpg" alt="Mario underwater" title="Mario underwater">
 						</a>
 						<div class="media-body">
@@ -358,7 +361,7 @@
 						</div>
 					</div>
 					<div class="media">
-						<a class="pull-left" href="assets/img/nes_screen_supermariobros3_7.jpg">
+						<a class="pull-left" href="assets/img/nes_screen_supermariobros3_4.jpg">
 							<img class="media-object" src="assets/img/nes_screen_supermariobros3_7.jpg" alt="Mario on World 8 map" title="Mario on World 8 map">
 						</a>
 						<div class="media-body">
