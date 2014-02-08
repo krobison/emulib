@@ -157,22 +157,9 @@
 			<div>
 			<div id="info">
 				<div id="pictureholder">
-					<div id="game_picture">
 						<a class="thumbnail" href="assets/img/nes_supermariobros3.jpg" title="Super Mario Bros.3 Box Art">
 							<img src="assets/img/nes_supermariobros3.jpg"/>
 						</a>
-					</div>
-					<div id="game_thumbs" class="yoxview">
-						<a class="thumbnail" href="assets/img/nes_cart_supermariobros3.jpg" id="game_artthumb" title="Super Mario Bros.3 Cartridge">
-							<img src="assets/img/nes_cart_supermariobros3.jpg" alt="Super Mario Bros.3 Cartridge"/>
-						</a>
-						<a class="thumbnail" href="assets/img/nes_menu_supermariobros3.jpg" id="game_artthumb" title="Super Mario Bros.3 Menu">
-							<img src="assets/img/nes_menu_supermariobros3.jpg"/>
-						</a>
-						<a class="thumbnail" href="assets/img/nes_game_supermariobros3.jpg" id="game_artthumb" title="Super Mario Bros.3 Gameplay">
-							<img src="assets/img/nes_game_supermariobros3.jpg"/>
-						</a>
-					</div>
 				</div>
 				<div id="infotable">
 					<table class="table">
@@ -220,6 +207,25 @@
 						<tr>
 							<td>Players</td>
 							<td>1-2</td>
+						</tr>
+						<tr class="tableheader active">
+							<td colspan="2">Game Media</td>
+						<tr>
+						<tr>
+							<td>Cartridge</td>
+							<td id="mediacart">
+								<a id="media" class="thumbnail" href="assets/img/nes_cart_supermariobros3.jpg" title="Super Mario Bros.3 Cartridge">
+									<img src="assets/img/nes_cart_supermariobros3.jpg"/>
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td>Manual</td>
+							<td>
+								<a id="media" class="thumbnail" href="assets/img/nes_manual_supermariobros3.pdf" title="Super Mario Bros.3 Cartridge">
+									<img src="assets/img/nes_manthumb_supermariobros3.jpg"/>
+								</a>
+							</td>
 						</tr>
 					</table>
 				</div>
@@ -289,7 +295,7 @@
 					<h4>Screenshots</h4>
 				</div>
 				<div id="screens">
-					<div class="col-xs-6 col-md-2">
+					<!--<div class="col-xs-6 col-md-2">
 						<a class="thumbnail" href="assets/img/nes_screen_supermariobros3_1.jpg" id="screenthumb" title="Mario on an Airship">
 							<img src="assets/img/nes_screen_supermariobros3_1.jpg"/>
 						</a>
@@ -323,6 +329,42 @@
 						<a class="thumbnail" href="assets/img/nes_screen_supermariobros3_7.jpg" id="screenthumb" title="World 8">
 							<img src="assets/img/nes_screen_supermariobros3_7.jpg"/>
 						</a>
+					</div>-->
+					<div class="media">
+						<a class="pull-left" href="assets/img/nes_screen_supermariobros3_1.jpg">
+							<img class="media-object" src="assets/img/nes_screen_supermariobros3_1.jpg" alt="Mario on an airship" title="Mario on an airship">
+						</a>
+						<div class="media-body">
+							<h4 class="media-heading">On an Airship</h4>
+								<span>Bullets everywhere!</span>
+						</div>
+					</div>
+					<div class="media">
+						<a class="pull-left" href="assets/img/nes_screen_supermariobros3_3.jpg">
+							<img class="media-object" src="assets/img/nes_screen_supermariobros3_3.jpg" alt="Mario in the Desert" title="Mario in the Desert">
+						</a>
+						<div class="media-body">
+							<h4 class="media-heading">In a Desert level</h4>
+								<span>There are many different environments!</span>
+						</div>
+					</div>
+					<div class="media">
+						<a class="pull-left" href="assets/img/nes_screen_supermariobros3_6.jpg">
+							<img class="media-object" src="assets/img/nes_screen_supermariobros3_6.jpg" alt="Mario underwater" title="Mario underwater">
+						</a>
+						<div class="media-body">
+							<h4 class="media-heading">Mario Underwater</h4>
+								<span>Mario using the frog suit powerup for better underwater control.</span>
+						</div>
+					</div>
+					<div class="media">
+						<a class="pull-left" href="assets/img/nes_screen_supermariobros3_7.jpg">
+							<img class="media-object" src="assets/img/nes_screen_supermariobros3_7.jpg" alt="Mario on World 8 map" title="Mario on World 8 map">
+						</a>
+						<div class="media-body">
+							<h4 class="media-heading">World-8 map</h4>
+								<span>Mario on the final world map.</span>
+						</div>
 					</div>
 				</div>
 				<br><br>
@@ -404,7 +446,6 @@
 					return openerElement.is('img') ? openerElement : openerElement.find('img');
 				}			
 			},
-			gallery:{enabled:true},
 			titleSrc: 'title',
 		});
 		$('#screens').magnificPopup({
@@ -426,6 +467,26 @@
 				}			
 			},
 			gallery:{enabled:true},
+			titleSrc: 'title',
+		});
+		$('#mediacart').magnificPopup({
+			delegate: 'a', // child items selector, by clicking on it popup will open
+			type: 'image',
+			 zoom: {
+				enabled: true, // By default it's false, so don't forget to enable it
+
+				duration: 300, // duration of the effect, in milliseconds
+				easing: 'ease-in-out', // CSS transition easing function 
+
+				// The "opener" function should return the element from which popup will be zoomed in
+				// and to which popup will be scaled down
+				// By defailt it looks for an image tag:
+				opener: function(openerElement) {
+					// openerElement is the element on which popup was initialized, in this case its <a> tag
+					// you don't need to add "opener" option if this code matches your needs, it's defailt one.
+					return openerElement.is('img') ? openerElement : openerElement.find('img');
+				}			
+			},
 			titleSrc: 'title',
 		});
 		

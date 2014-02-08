@@ -1,6 +1,6 @@
 
 body{
-	min-width:1216px;
+	min-width:1264px;
 }
 
 #gamepanel{
@@ -38,11 +38,6 @@ body{
 	width:16%;
 	height:100%;
 	float:right;
-}
-
-#game_picture{
-	width:84%;
-	float:left;
 }
 
 #game_artthumb{
@@ -120,4 +115,17 @@ body{
 #screens{
 	width:100%;
 	display:inline-block;
+}
+
+#media{
+	width:128px;
+}
+
+.media-object{
+	height:96px;
+	width:96px;
+}
+
+.media{
+	margin-right:16px;
 }
