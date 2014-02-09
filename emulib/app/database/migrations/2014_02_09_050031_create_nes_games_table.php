@@ -23,6 +23,15 @@ class CreateNesGamesTable extends Migration {
 			$table->string('filename');
 			
 			
+			//if the game has different medias
+			$table->boolean('boxart');
+			$table->boolean('cartridge');
+			$table->boolean('manual');
+			$table->boolean('sound');
+			$table->tinyInteger('screenshots');
+			
+			
+			
 			//Creators
 			$table->string('publisher')->nullable();
 			$table->string('developer')->nullable();

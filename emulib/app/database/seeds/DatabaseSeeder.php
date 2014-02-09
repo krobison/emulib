@@ -21,6 +21,7 @@ class NesSeeder extends Seeder {
 			'release_usa' => '1990-02-12',
 			'players' => 2,
 			'filename' => 'supermariobros3',
+			'boxart' => 'true',
 			'publisher' => 'Nintendo',
 			'developer' => 'Nintendo R&D',
 			'producer' => 'Shigeru Miyamoto',

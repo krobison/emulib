@@ -70,10 +70,12 @@
 					</td>
 				</tr>
 			@endif
-			<tr>
-				<td>Players</td>
-				<td>1-2</td>
-			</tr>
+			@if (isset($game->players))
+				<tr>
+					<td>Players</td>
+					<td>1-{{$game->players}}</td>
+				</tr>
+			@endif
 			<tr class="tableheader active">
 				<td colspan="2">Game Media</td>
 			<tr>

@@ -282,14 +282,12 @@
 								<td><img class="ratings" src="assets/img/esrb_e.png"/></td>
 								<td>PEGI</td>
 								<td><img class="ratings" src="assets/img/pegi_3.png"/></td>
-								<td>CERO</td>
-								<td><img class="ratings" src="assets/img/cero_a.png"/></td>
 							</tr>
 							<tr>
+								<td>CERO</td>
+								<td><img class="ratings" src="assets/img/cero_a.png"/></td>
 								<td>ACB</td>
 								<td><img class="ratings" src="assets/img/acb_g.png"/></td>
-								<td>USK</td>
-								<td><img class="ratings" src="assets/img/usk_0.png"/></td>
 							</tr>
 						</table>
 					</div>
