@@ -30,32 +30,46 @@
 					<td>{{$game->producer}}</td>
 				</tr>
 			@endif
-			<tr>
-				<td>Series</td>
-				<td>Super Mario</td>
-			</tr>
+			@if (isset($game->series))
+				<tr>
+					<td>Series</td>
+					<td>{{$game->series}}</td>
+				</tr>
+			@endif
 			<tr class="tableheader warning">
 				<td colspan="2">Release</td>
 			<tr>
-			<tr>
-				<td>Japan&nbsp;&nbsp;<img class="flag" src={{asset('img/flags/japan.png')}} /></td>
-				<td>October 23, 1988</td>
-			</tr>
-			<tr>
-				<td>North America&nbsp;&nbsp;<img class="flag" src={{asset('img/flags/usa.png')}} /></td>
-				<td>February 12, 1990</td>
-			</tr>
-			<tr>
-				<td>PAL&nbsp;&nbsp;<img class="flag" src={{asset('img/flags/eu.png')}} /></td>
-				<td>August 29, 1991</td>
-			</tr>
+			@if (isset($game->release_japan))
+				<tr>
+					<td>Japan&nbsp;&nbsp;<img class="flag" src={{asset('img/flags/japan.png')}} /></td>
+					<td>{{date_format(date_create($game->release_japan),'F d, Y')}}</td>
+				</tr>
+			@endif 
+			@if (isset($game->release_usa))
+				<tr>
+					<td>North America&nbsp;&nbsp;<img class="flag" src={{asset('img/flags/usa.png')}} /></td>
+					<td>{{date_format(date_create($game->release_usa),'F d, Y')}}</td>
+				</tr>
+			@endif
+			@if (isset($game->release_pal))
+				<tr>
+					<td>PAL&nbsp;&nbsp;<img class="flag" src={{asset('img/flags/eu.png')}} /></td>
+					<td>{{date_format(date_create($game->release_pal),'F d, Y')}}</td>
+				</tr>
+			@endif
 			<tr class="tableheader danger">
 				<td colspan="2">Gameplay</td>
 			<tr>
-			<tr>
-				<td>Genre</td>
-				<td>Platformer</td>
-			</tr>
+			@if (isset($genres))
+				<tr>
+					<td>Genre(s)</td>
+					<td>
+						@foreach ($genres as $genre)
+							{{ucfirst($genre->name)}}<br>
+						@endforeach
+					</td>
+				</tr>
+			@endif
 			<tr>
 				<td>Players</td>
 				<td>1-2</td>
