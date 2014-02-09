@@ -1,0 +1,10 @@
+body{
+	min-width:1264px;
+	height:100%;
+}
+
+
+#gamepanel{
+	margin-left:320px;
+	margin-right:32px;
+}

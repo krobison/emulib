@@ -1,0 +1,30 @@
+#info{
+	width:35%;
+	float:right;
+}
+
+.tableheader{
+	text-align:center;
+}
+
+#infotable td:first_of_type{
+	width:40%;
+}
+
+#infotable tr{
+	border-left:1px rgba(0,0,0,0.1) solid;
+	border-right:1px rgba(0,0,0,0.1) solid;
+	border-bottom:1px rgba(0,0,0,0.1) solid;
+}
+
+.flag{
+	width:32px;
+	margin-top:-6px;
+	float:left;
+	margin-left:8px;
+	margin-right:8px;
+}
+
+.media{
+	margin-right:16px;
+}

@@ -17,3 +17,7 @@ Route::get('/', 'HomeController@showHome');
 Route::get('invertNavbar', 'ThemeController@invertNavbar');
 Route::get('uninvertNavbar', 'ThemeController@uninvertNavbar');
 Route::get('theme{theme}', 'ThemeController@changeTheme');
+
+Route::get('nes_library','LibraryController@showNes');
+
+Route::get('nes/{id}','GameController@showNes');

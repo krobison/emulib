@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>@yield('title')</title>
 	
 	<?php
@@ -21,6 +21,9 @@
 	?>
 	
 	{{HTML::style('css/bootstrap_'.$theme.'.min.css')}}
+	
+	{{HTML::script('//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js');}}
+	{{HTML::script('js/bootstrap.min.js');}}
 
 </head>
 
@@ -31,10 +34,6 @@
 	<section id="content">
 		@yield('content')
 	</section>
-	
 		
-	{{HTML::script('//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js');}}
-	{{HTML::script('js/bootstrap.min.js');}}
-	
 </body>
 </html>
