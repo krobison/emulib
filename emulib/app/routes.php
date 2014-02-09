@@ -11,7 +11,9 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+
+Route::get('/', 'HomeController@showHome');
+
+Route::get('invertNavbar', 'ThemeController@invertNavbar');
+Route::get('uninvertNavbar', 'ThemeController@uninvertNavbar');
+Route::get('theme{theme}', 'ThemeController@changeTheme');

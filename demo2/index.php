@@ -344,7 +344,7 @@
 					</div>
 					<div class="media">
 						<a class="pull-left" href="assets/img/nes_screen_supermariobros3_2.jpg">
-							<img class="media-object" src="assets/img/nes_screen_supermariobros3_3.jpg" alt="Mario in the Desert" title="Mario in the Desert">
+							<img class="media-object" src="assets/img/nes_screen_supermariobros3_2.jpg" alt="Mario in the Desert" title="Mario in the Desert">
 						</a>
 						<div class="media-body">
 							<h4 class="media-heading">In a Desert level</h4>
@@ -353,7 +353,7 @@
 					</div>
 					<div class="media">
 						<a class="pull-left" href="assets/img/nes_screen_supermariobros3_3.jpg">
-							<img class="media-object" src="assets/img/nes_screen_supermariobros3_6.jpg" alt="Mario underwater" title="Mario underwater">
+							<img class="media-object" src="assets/img/nes_screen_supermariobros3_3.jpg" alt="Mario underwater" title="Mario underwater">
 						</a>
 						<div class="media-body">
 							<h4 class="media-heading">Mario Underwater</h4>
@@ -362,7 +362,7 @@
 					</div>
 					<div class="media">
 						<a class="pull-left" href="assets/img/nes_screen_supermariobros3_4.jpg">
-							<img class="media-object" src="assets/img/nes_screen_supermariobros3_7.jpg" alt="Mario on World 8 map" title="Mario on World 8 map">
+							<img class="media-object" src="assets/img/nes_screen_supermariobros3_4.jpg" alt="Mario on World 8 map" title="Mario on World 8 map">
 						</a>
 						<div class="media-body">
 							<h4 class="media-heading">World-8 map</h4>
