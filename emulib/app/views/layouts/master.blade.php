@@ -11,10 +11,13 @@
 		$themes = array(
 			"cerulean",
 			"cosmo",
+			"cupid",
 			"readable",
 			"flatly",
+			"lumen",
 			"slate",
 			"spacelab",
+			"superhero",
 			"united",
 			"yeti"
 		);
