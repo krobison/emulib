@@ -15,6 +15,7 @@ EmuLib: {{$game->name}}
     <div class="panel panel-default" id="gamepanel">
 		<div class="panel-body">
 			@include('game.nes_info')
+			@include('game.nes_reader')
 		</div>
 	</div>
 

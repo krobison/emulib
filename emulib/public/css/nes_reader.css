@@ -1,0 +1,21 @@
+
+#reader{
+	width:65%;
+	position:relative;
+	float:left;
+}
+
+#buttonholder{
+	float:right;
+	margin-right:16px;
+	margin-top:16px;
+}
+
+.page-header{
+	margin-top:0px;
+	margin-right:16px;
+}
+
+.header_thumb{
+	margin-left:16px;
+}

@@ -28,7 +28,7 @@ class CreateNesGamesTable extends Migration {
 			$table->boolean('cartridge');
 			$table->boolean('manual');
 			$table->boolean('sound');
-			$table->tinyInteger('screenshots');
+			$table->string('sound_description');
 			
 			
 			
@@ -45,7 +45,7 @@ class CreateNesGamesTable extends Migration {
 			$table->string('esrb')->nullable();
 			$table->string('pegi')->nullable();
 			
-			$table->string('description')->nullable();
+			$table->text('description')->nullable();
 			
 			$table->timestamps();
 		});

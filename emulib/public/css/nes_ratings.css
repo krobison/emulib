@@ -1,0 +1,44 @@
+#ratingsection{
+	min-height:250px;
+}
+
+#ratingtable{
+	width:45%;
+	float:left;
+}
+
+#safetytable{
+	width:45%;
+	margin-right:16px;
+	float:right;
+}
+
+#ratingtable,#safetytable{
+	border-left:1px rgba(0,0,0,0.1) solid;
+	border-right:1px rgba(0,0,0,0.1) solid;
+	border-bottom:1px rgba(0,0,0,0.1) solid;
+}
+
+#ratingtable td{
+	text-align:center;
+}
+
+#safetytable td{
+	text-align:center;
+}
+
+.ratings{
+	height:64px;
+}
+
+.goodRating{
+	color:#00C000;
+}
+
+.okRating{
+	color:gold;
+}
+
+.badRating{
+	color:#C00000;
+}

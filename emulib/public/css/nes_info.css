@@ -3,6 +3,7 @@
 	float:right;
 }
 
+
 .tableheader{
 	text-align:center;
 }
@@ -17,6 +18,7 @@
 	border-bottom:1px rgba(0,0,0,0.1) solid;
 }
 
+
 .flag{
 	width:32px;
 	margin-top:-6px;
@@ -27,4 +29,8 @@
 
 .media{
 	margin-right:16px;
+}
+
+#media{
+	width:128px;
 }

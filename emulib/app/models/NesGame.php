@@ -9,4 +9,12 @@ class NesGame extends Eloquent {
         return $this->belongsToMany('Genre');
     }
 	
+	public function ratings(){
+        return $this->belongsToMany('Rating');
+    }
+	
+	public function screenshots(){
+        return $this->belongsToMany('Screenshot');
+    }
+	
 }

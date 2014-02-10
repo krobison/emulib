@@ -3,7 +3,7 @@
 <div>
 <div id="info">
 	<div id="pictureholder">
-			<a class="thumbnail" href={{asset('img/nes_boxart/'.$game->filename.'.jpg')}} title="Super Mario Bros.3 Box Art">
+			<a class="thumbnail" href={{asset('img/nes_boxart/'.$game->filename.'.jpg')}}>
 				<img src={{asset('img/nes_boxart/'.$game->filename.'.jpg')}} />
 			</a>
 	</div>
@@ -79,22 +79,26 @@
 			<tr class="tableheader active">
 				<td colspan="2">Game Media</td>
 			<tr>
-			<tr>
-				<td>Cartridge</td>
-				<td id="mediacart">
-					<a id="media" class="thumbnail" href="assets/img/nes_cart_supermariobros3.jpg" title="Super Mario Bros.3 Cartridge">
-						<img src="assets/img/nes_cart_supermariobros3.jpg"/>
-					</a>
-				</td>
-			</tr>
-			<tr>
-				<td>Manual</td>
-				<td>
-					<a id="media" class="thumbnail" href="assets/img/nes_manual_supermariobros3.pdf" title="Super Mario Bros.3 Cartridge">
-						<img src="assets/img/nes_manthumb_supermariobros3.jpg"/>
-					</a>
-				</td>
-			</tr>
+			@if ($game->cartridge)
+				<tr>
+					<td>Cartridge</td>
+					<td id="mediacart">
+						<a id="media" class="thumbnail" href={{asset('img/nes_cartridge/'.$game->filename.'.jpg')}}>
+							<img src={{asset('img/nes_cartridge/'.$game->filename.'.jpg')}} />
+						</a>
+					</td>
+				</tr>
+			@endif
+			@if ($game->manual)
+				<tr>
+					<td>Manual</td>
+					<td>
+						<a id="media" class="thumbnail" href={{asset('img/nes_manual/'.$game->filename.'.pdf')}}>
+							<img src={{asset('img/nes_manual/'.$game->filename.'.jpg')}} />
+						</a>
+					</td>
+				</tr>
+			@endif
 		</table>
 	</div>
 </div>
@@ -120,8 +124,7 @@
 					// you don't need to add "opener" option if this code matches your needs, it's defailt one.
 					return openerElement.is('img') ? openerElement : openerElement.find('img');
 				}			
-			},
-			titleSrc: 'title',
+			}
 		});
 		$('#mediacart').magnificPopup({
 			delegate: 'a', // child items selector, by clicking on it popup will open
@@ -140,7 +143,6 @@
 					// you don't need to add "opener" option if this code matches your needs, it's defailt one.
 					return openerElement.is('img') ? openerElement : openerElement.find('img');
 				}			
-			},
-			titleSrc: 'title',
+			}
 		});
 	</script>
