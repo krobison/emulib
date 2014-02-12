@@ -8,12 +8,14 @@
 	</div>
 	
 	<div id="codetableholder">
-		<table class="table" id="codetable">
-			<tr class="tableheader success">
-				<td colspan="6">GameGenie</td>
+		<table class="table">
+			<tr class="tableheader success" id="show">
+				<td colspan="6">GameGenie (click to expand)</td>
 			</tr>
+		</table>
+		<table class="table" id="codetable">
 			@foreach ($genies as $genie)
-				<tr>
+				<tr class="showhide">
 					@if ($genie->twoColumn)
 						<td colspan="2" class="active" id="doublerow"> {{$genie->description}} </td>
 					@else
@@ -26,3 +28,10 @@
 	</div>
 	
 @endif
+
+<script>
+	$("#show").click(function(){
+		$("#codetable").toggle(300);
+	});
+	$(document).ready(function() {$("#codetable").toggle();});
+</script>
