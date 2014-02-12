@@ -24,6 +24,7 @@ class NesSeeder extends Seeder {
 		$platformer = DB::table('genres')->where('name', 'platformer')->first();
 		$adventure = DB::table('genres')->where('name', 'adventure')->first();
 		DB::table('genre_nes_game')->delete();
+		DB::table('genie_nes_game')->delete();
 		DB::table('nes_game_rating')->delete();
 		DB::table('nes_game_screenshot')->delete();
 	
@@ -69,6 +70,16 @@ class NesSeeder extends Seeder {
 		$superMarioBros3->screenshots()->attach(Screenshot::create(array('name' => 'In A Desert Level','description' => 'There are many different environments!'))->id);
 		$superMarioBros3->screenshots()->attach(Screenshot::create(array('name' => 'Mario Underwater','description' => 'Mario using the frog suit powerup for better underwater control.'))->id);
 		$superMarioBros3->screenshots()->attach(Screenshot::create(array('name' => 'World-8 Map','description' => 'Mario on the final world map.'))->id);
+		$superMarioBros3->genies()->attach(Genie::create(array('code' => NULL,'description' => 'All codes (except as noted) work for Luigi as well as Mario.','twoColumn' => true))->id);
+		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'SLXPLOVS','description' => 'Infinite lives for Mario and Luigi'))->id);
+		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'AEKPTZGA','description' => '1 life for Mario and Luigi after continue'))->id);
+		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'AEKPTZGE','description' => '9 lives for Mario and Luigi after continue'))->id);
+		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'ELKZYVEK','description' => 'Power Jumps'))->id);
+		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'EZKZYVEK','description' => 'Super Power Jumps'))->id);
+		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'EAKZYVEK','description' => 'Mega Power Jumps'))->id);
+		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'GZUXNGEI','description' => 'Multi-Jumps'))->id);
+		$superMarioBros3->genies()->attach(Genie::create(array('code' => NULL,'description' => 'With the next code, if you let Mario or Luigi drop too long, you can\'t sky walk until you touch the ground again','twoColumn' => true))->id);
+		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'SXEZSKOZ','description' => 'Skywalker'))->id);
 		//============================================================================================================================
 		
 		//============================================================================================================================

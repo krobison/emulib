@@ -7,7 +7,8 @@ class GameController extends BaseController {
 		$genres = $game->genres()->get();
 		$ratings = $game->ratings()->get();
 		$screenshots = $game->screenshots()->get();
-		return View::make("game.nes")->with('game',$game)->with('genres',$genres)->with('ratings',$ratings)->with('screenshots',$screenshots);
+		$genies = $game->genies()->get();
+		return View::make("game.nes")->with('game',$game)->with('genres',$genres)->with('ratings',$ratings)->with('screenshots',$screenshots)->with('genies',$genies);
 	}
 
 }

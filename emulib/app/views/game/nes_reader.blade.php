@@ -14,4 +14,5 @@
 		</p>
 	@include('game.nes_ratings')
 	@include('game.nes_screenshots')
+	@include('game.nes_genies')
 </div>
