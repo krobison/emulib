@@ -34,8 +34,95 @@ class NesSeeder extends Seeder {
 		NesGame::create(array(
 			'name' => '10-Yard Fight',
 			'filename' => '10yardfight',
-			'boxart' => true
+			'boxart' => true,
+			'description' => 'This game needs a description.'
 		));
+		NesGame::create(array(
+			'name' => '1942',
+			'filename' => '1942',
+			'boxart' => true,
+			'description' => 'This game needs a description.'
+		));
+		NesGame::create(array(
+			'name' => '1943: The Battle of Midway',
+			'filename' => '1943',
+			'boxart' => true,
+			'description' => 'This game needs a description.'
+		));
+		NesGame::create(array(
+			'name' => '3-D WorldRunner',
+			'filename' => '3dworldrunner',
+			'boxart' => true,
+			'description' => 'This game needs a description.'
+		));
+		NesGame::create(array(
+			'name' => '720°',
+			'filename' => '720',
+			'boxart' => true,
+			'description' => 'This game needs a description.'
+		));
+		NesGame::create(array(
+			'name' => '8 Eye\'s',
+			'filename' => '8eyes',
+			'boxart' => true,
+			'description' => 'This game needs a description.'
+		));
+
+		NesGame::create(array(
+			'name' => 'Abadox',
+			'filename' => 'abadox',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'A Nightmare on Elm Street',
+			'filename' => 'anightmareonelmstreet',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'The Addams Family',
+			'filename' => 'theaddamsfamily',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'The Addams Family: Pugsley\'s Scavenger Hunt',
+			'filename' => 'theaddamsfamilypugsleysscavengerhunt',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Advanced Dungeons & Dragons: Dragons of Flame',
+			'filename' => 'advanceddungeonsanddragonsdragonsofflame',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Advanced Dungeons & Dragons: Dragonstrike',
+			'filename' => 'advanceddungeonsanddragonsdragonstrike',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Advanced Dungeons & Dragons: Heroes of the Lance',
+			'filename' => 'advanceddungeonsanddragonsheroesofthelance',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Advanced Dungeons & Dragons: Hillsfar',
+			'filename' => 'advanceddungeonsanddragonshillsfar',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Advanced Dungeons & Dragons: Pool of Radiance',
+			'filename' => 'advanceddungeonsanddragonspoolofradiance',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+
 	
 		//============================================================================================================================
 		$superMarioBros3 = NesGame::create(array(

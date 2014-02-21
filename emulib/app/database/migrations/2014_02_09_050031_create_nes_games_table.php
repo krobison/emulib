@@ -45,7 +45,7 @@ class CreateNesGamesTable extends Migration {
 			$table->string('esrb')->nullable()->default(null);
 			$table->string('pegi')->nullable()->default(null);
 			
-			$table->text('description')->nullable()->default(null);
+			$table->text('description')->nullable();
 			
 			$table->timestamps();
 		});
