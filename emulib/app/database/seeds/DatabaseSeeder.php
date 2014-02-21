@@ -32,7 +32,9 @@ class NesSeeder extends Seeder {
 	
 	
 		NesGame::create(array(
-			'name' => '10-Yard Fight'
+			'name' => '10-Yard Fight',
+			'filename' => '10yardfight',
+			'boxart' => true
 		));
 	
 		//============================================================================================================================
