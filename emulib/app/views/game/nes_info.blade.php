@@ -3,9 +3,15 @@
 <div>
 <div id="info">
 	<div id="pictureholder">
+		@if (file_exists(base_path().'/public/img/nes_boxart/'.$game->filename.'.jpg'))
 			<a class="thumbnail" href={{asset('img/nes_boxart/'.$game->filename.'.jpg')}}>
 				<img src={{asset('img/nes_boxart/'.$game->filename.'.jpg')}} />
 			</a>
+		@else
+			<a class="thumbnail" href={{asset('img/nes_boxart/default.jpg')}}>
+				<img src={{asset('img/nes_boxart/default.jpg')}} />
+			</a>
+		@endif
 	</div>
 	<div id="infotable">
 		<table class="table">
