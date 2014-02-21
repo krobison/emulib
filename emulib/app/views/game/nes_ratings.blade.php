@@ -22,6 +22,12 @@
 			<tr class="tableheader active">
 				<td colspan="6">Content Ratings</td>
 			</tr>
+			@if (! (isset($game->esrb) || isset($game->pegi) || isset($game->cero)  || isset($game->acb)   ) )
+				<tr>
+					<td>None</td>
+					<td><img class="ratings" src={{asset('img/ratings/none.png')}} /></td>
+				</tr>
+			@endif
 			<tr>
 				@if (isset($game->esrb))
 					<td>ESRB</td>
@@ -37,7 +43,7 @@
 					<td>CERO</td>
 					<td><img class="ratings" src={{asset('img/ratings/'.$game->cero)}} /></td>
 				@endif
-				@if (isset($game->esrb))
+				@if (isset($game->acb))
 					<td>ACB</td>
 					<td><img class="ratings" src={{asset('img/ratings/'.$game->acb)}} /></td>
 				@endif

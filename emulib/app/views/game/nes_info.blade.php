@@ -9,9 +9,11 @@
 	</div>
 	<div id="infotable">
 		<table class="table">
-			<tr class="tableheader success">
-				<td colspan="2">Development</td>
-			</tr>
+			@if (isset($game->developer) || isset($game->publisher) || isset($game->producer) || isset($game->series))
+				<tr class="tableheader success">
+					<td colspan="2">Development</td>
+				</tr>
+			@endif
 			@if (isset($game->developer))
 				<tr>
 					<td>Developer</td>
@@ -36,9 +38,11 @@
 					<td>{{$game->series}}</td>
 				</tr>
 			@endif
-			<tr class="tableheader warning">
-				<td colspan="2">Release</td>
-			<tr>
+			@if (isset($game->release_japan) || isset($game->release_usa) || isset($game->release_pal))
+				<tr class="tableheader warning">
+					<td colspan="2">Release</td>
+				<tr>
+			@endif
 			@if (isset($game->release_japan))
 				<tr>
 					<td>Japan&nbsp;&nbsp;<img class="flag" src={{asset('img/flags/japan.png')}} /></td>
@@ -57,9 +61,11 @@
 					<td>{{date_format(date_create($game->release_pal),'F d, Y')}}</td>
 				</tr>
 			@endif
-			<tr class="tableheader danger">
-				<td colspan="2">Gameplay</td>
-			<tr>
+			@if (isset($genres) || isset($game->players))
+				<tr class="tableheader danger">
+					<td colspan="2">Gameplay</td>
+				<tr>
+			@endif
 			@if (isset($genres))
 				<tr>
 					<td>Genre(s)</td>
@@ -76,9 +82,11 @@
 					<td>1-{{$game->players}}</td>
 				</tr>
 			@endif
-			<tr class="tableheader active">
-				<td colspan="2">Game Media</td>
-			<tr>
+			@if ($game->cartridge || $game->manual)
+				<tr class="tableheader active">
+					<td colspan="2">Game Media</td>
+				<tr>
+			@endif
 			@if ($game->cartridge)
 				<tr>
 					<td>Cartridge</td>
