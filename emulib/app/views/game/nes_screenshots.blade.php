@@ -1,6 +1,8 @@
 {{HTML::style('css/nes_screenshots.css')}}
 {{HTML::style('packages/jplayer/skins/blue.monday/jplayer.blue.monday.css')}}
 
+@if ($screenshots->count() > 0)
+
 <div class="page-header">
 	<h4>Screenshots</h4>
 </div>
@@ -21,9 +23,13 @@
 	
 </div>
 
+@endif
+
+@if ($game->sound)
+
 <div class="page-header" style="margin-top:32px;">
-		<h4>Sound</h4>
-	</div>
+	<h4>Sound</h4>
+</div>
 	
 	
 	<!--start of player-->
@@ -71,7 +77,6 @@
 
 {{HTML::script('packages/magpopup/jquery.magnific-popup.min.js');}}
 
-@if ($game->sound)
 	{{HTML::script('packages/jplayer/jquery.jplayer.js');}}
 	<div id="sounddiv" location="{{asset('sound/nes/'.$game->filename.'.mp3')}}"></div>
 	<script>
