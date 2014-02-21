@@ -30,6 +30,11 @@ class NesSeeder extends Seeder {
 	
 		DB::table('nes_games')->delete();
 	
+	
+		NesGame::create(array(
+			'name' => '10-Yard Fight'
+		));
+	
 		//============================================================================================================================
 		$superMarioBros3 = NesGame::create(array(
 			'name' => 'Super Mario Bros. 3',

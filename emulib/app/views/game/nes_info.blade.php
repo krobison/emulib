@@ -3,7 +3,7 @@
 <div>
 <div id="info">
 	<div id="pictureholder">
-		@if (file_exists(base_path().'/public/img/nes_boxart/'.$game->filename.'.jpg'))
+		@if ($game->boxart)
 			<a class="thumbnail" href={{asset('img/nes_boxart/'.$game->filename.'.jpg')}}>
 				<img src={{asset('img/nes_boxart/'.$game->filename.'.jpg')}} />
 			</a>
@@ -72,7 +72,7 @@
 					<td colspan="2">Gameplay</td>
 				<tr>
 			@endif
-			@if (isset($genres))
+			@if ($genres->count() > 0)
 				<tr>
 					<td>Genre(s)</td>
 					<td>
@@ -85,7 +85,11 @@
 			@if (isset($game->players))
 				<tr>
 					<td>Players</td>
-					<td>1-{{$game->players}}</td>
+					@if ($game->players > 1)
+						<td>1-{{$game->players}}</td>
+					@else
+						<td>{{$game->players}}</td>
+					@endif
 				</tr>
 			@endif
 			@if ($game->cartridge || $game->manual)
