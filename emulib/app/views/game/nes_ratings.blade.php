@@ -15,6 +15,11 @@
 					<td class={{$rating->class}}>{{$rating->rating}}</td>
 				</tr>
 			@endforeach
+			@if ($ratings->count() < 1)
+				<tr colspan="2">
+					<td>No ratings available yet.</td>
+				</tr>
+			@endif
 		</table>
 	</div>
 	<div id="safetytable">
