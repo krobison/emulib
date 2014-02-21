@@ -122,6 +122,210 @@ class NesSeeder extends Seeder {
 			'boxart' => true,
 			'description' => 'This game needs a description'
 		));
+		NesGame::create(array(
+			'name' => 'Adventure Island',
+			'filename' => 'adventureisland',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Adventure Island II',
+			'filename' => 'adventureisland2',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Adventure Island 3',
+			'filename' => 'adventureisland3',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Adventures in the Magic Kingdom',
+			'filename' => 'adventuresinthemagickingdom',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'The Adventures of Bayou Billy',
+			'filename' => 'theadventuresofbayoubilly',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'The Adventures of Dino Riki',
+			'filename' => 'theadventuresofdinoriki',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'The Adventures of Gilligan\'s Island',
+			'filename' => 'theadventuresofgilligansisland',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Adventures of Lolo',
+			'filename' => 'adventuresoflolo',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Adventures of Lolo 2',
+			'filename' => 'adventuresoflolo2',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Adventures of Lolo 3',
+			'filename' => 'adventuresoflolo3',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'The Adventures of Rad Gravity',
+			'filename' => 'theadventuresofradgravity',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'The Adventures of Rocky & Bullwinkle and Friends',
+			'filename' => 'theadventuresofrockyandbullwinkleandfriends',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'The Adventures of Tom Sawyer',
+			'filename' => 'theadventuresoftomsawyer',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Air Fortress',
+			'filename' => 'airfortress',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Airwolf',
+			'filename' => 'airwolf',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Al Unser Jr.\'s Turbo Racing',
+			'filename' => 'alunserjrsturboracing',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Alfred Chicken',
+			'filename' => 'alfredchicken',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Alien Syndrome',
+			'filename' => 'aliensyndrome',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Alien3',
+			'filename' => 'alien3',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'All-Pro Basketball',
+			'filename' => 'allprobasketball',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Alpha Mission',
+			'filename' => 'alphamission',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Amagon',
+			'filename' => 'amagon',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'American Gladiators',
+			'filename' => 'americangladiators',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Anticipation',
+			'filename' => 'anticipation',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Arch Rivals',
+			'filename' => 'archrivals',
+			'boxart' => false,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Archon',
+			'filename' => 'archon',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Arkanoid',
+			'filename' => 'arkanoid',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Arkista\'s Ring',
+			'filename' => 'arkistasring',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Asterix',
+			'filename' => 'asterix',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Astyanax',
+			'filename' => 'astyanax',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Athena',
+			'filename' => 'athena',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Athletic World',
+			'filename' => 'athleticworld',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Attack of the Killer Tomatoes',
+			'filename' => 'attackofthekillertomatoes',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Aussie Rules Footy',
+			'filename' => 'aussierulesfooty',
+			'boxart' => false,
+			'description' => 'This game needs a description'
+		));
 
 	
 		//============================================================================================================================
