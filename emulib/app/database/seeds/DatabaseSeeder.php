@@ -25,8 +25,20 @@ class NesSeeder extends Seeder {
 		$g_americanfootball = Genre::create(array(
 			'name' => 'American Football'
 		));	
+		$g_combatflightsimulator = Genre::create(array(
+			'name' => 'Combat Flight Simulator'
+		));	
+		$g_horizontalscrollingshooter = Genre::create(array(
+			'name' => 'Horizontal Scrolling Shooter'
+		));
 		$g_platformer = Genre::create(array(
 			'name' => 'Platformer'
+		));
+		$g_railshooter = Genre::create(array(
+			'name' => 'Rail Shooter'
+		));
+		$g_roleplayinggame = Genre::create(array(
+			'name' => 'Role Playing Game'
 		));
 		$g_skateboarding = Genre::create(array(
 			'name' => 'Skateboarding'
@@ -82,6 +94,7 @@ class NesSeeder extends Seeder {
 			'description' => 'This game needs a description.'
 		));
 		$_3dworldrunner->genres()->attach($g_thirdpersonshooter->id);
+		$_3dworldrunner->genres()->attach($g_railshooter->id);
 		
 		$_720 = NesGame::create(array(
 			'name' => '720°',
@@ -107,54 +120,77 @@ class NesSeeder extends Seeder {
 			'boxart' => true,
 			'description' => 'This game needs a description'
 		));
+		$_abadox->genres()->attach($g_verticalscrollingshooter->id);
+		
 		$_anightmareonelmstreet = NesGame::create(array(
 			'name' => 'A Nightmare on Elm Street',
 			'filename' => 'anightmareonelmstreet',
 			'boxart' => true,
 			'description' => 'This game needs a description'
 		));
+		$_anightmareonelmstreet->genres()->attach($g_platformer->id);
+		
 		$_theaddamsfamily = NesGame::create(array(
 			'name' => 'The Addams Family',
 			'filename' => 'theaddamsfamily',
 			'boxart' => true,
 			'description' => 'This game needs a description'
 		));
+		$_theaddamsfamily->genres()->attach($g_platformer->id);
+		
 		$_theaddamsfamilypugsleysscavengerhunt = NesGame::create(array(
 			'name' => 'The Addams Family: Pugsley\'s Scavenger Hunt',
 			'filename' => 'theaddamsfamilypugsleysscavengerhunt',
 			'boxart' => true,
 			'description' => 'This game needs a description'
 		));
+		$_theaddamsfamilypugsleysscavengerhunt->genres()->attach($g_platformer->id);
+		
 		$_advanceddungeonsanddragonsdragonsofflame = NesGame::create(array(
 			'name' => 'Advanced Dungeons & Dragons: Dragons of Flame',
 			'filename' => 'advanceddungeonsanddragonsdragonsofflame',
 			'boxart' => true,
 			'description' => 'This game needs a description'
 		));
+		$_advanceddungeonsanddragonsdragonsofflame->genres()->attach($g_roleplayinggame->id);
+		$_advanceddungeonsanddragonsdragonsofflame->genres()->attach($g_adventure->id);
+		
 		$_advanceddungeonsanddragonsdragonstrike = NesGame::create(array(
 			'name' => 'Advanced Dungeons & Dragons: Dragonstrike',
 			'filename' => 'advanceddungeonsanddragonsdragonstrike',
 			'boxart' => true,
 			'description' => 'This game needs a description'
 		));
+		$_advanceddungeonsanddragonsdragonstrike->genres()->attach($g_combatflightsimulator->id);
+		
 		$_advanceddungeonsanddragonsheroesofthelance = NesGame::create(array(
 			'name' => 'Advanced Dungeons & Dragons: Heroes of the Lance',
 			'filename' => 'advanceddungeonsanddragonsheroesofthelance',
 			'boxart' => true,
 			'description' => 'This game needs a description'
 		));
+		$_advanceddungeonsanddragonsheroesofthelance->genres()->attach($g_roleplayinggame->id);
+		$_advanceddungeonsanddragonsheroesofthelance->genres()->attach($g_adventure->id);
+		
 		$_advanceddungeonsanddragonshillsfar = NesGame::create(array(
 			'name' => 'Advanced Dungeons & Dragons: Hillsfar',
 			'filename' => 'advanceddungeonsanddragonshillsfar',
 			'boxart' => true,
 			'description' => 'This game needs a description'
 		));
+		$_advanceddungeonsanddragonshillsfar->genres()->attach($g_roleplayinggame->id);
+		$_advanceddungeonsanddragonshillsfar->genres()->attach($g_adventure->id);
+		
+		
 		$_advanceddungeonsanddragonspoolofradiance = NesGame::create(array(
 			'name' => 'Advanced Dungeons & Dragons: Pool of Radiance',
 			'filename' => 'advanceddungeonsanddragonspoolofradiance',
 			'boxart' => true,
 			'description' => 'This game needs a description'
 		));
+		$_advanceddungeonsanddragonspoolofradiance->genres()->attach($g_roleplayinggame->id);
+		$_advanceddungeonsanddragonspoolofradiance->genres()->attach($g_adventure->id);
+		
 		$_adventureisland = NesGame::create(array(
 			'name' => 'Adventure Island',
 			'filename' => 'adventureisland',
