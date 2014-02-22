@@ -16,12 +16,30 @@ class NesSeeder extends Seeder {
 	
 		DB::table('genres')->delete();
 		
+		$g_action = Genre::create(array(
+			'name' => 'Action'
+		));	
 		$g_adventure = Genre::create(array(
-			'name' => 'adventure'
+			'name' => 'Adventure'
+		));	
+		$g_americanfootball = Genre::create(array(
+			'name' => 'American Football'
 		));	
 		$g_platformer = Genre::create(array(
-			'name' => 'platformer'
+			'name' => 'Platformer'
 		));
+		$g_skateboarding = Genre::create(array(
+			'name' => 'Skateboarding'
+		));
+		$g_sports = Genre::create(array(
+			'name' => 'Sports'
+		));
+		$g_thirdpersonshooter = Genre::create(array(
+			'name' => 'Third-Person Shooter'
+		));
+		$g_verticalscrollingshooter = Genre::create(array(
+			'name' => 'Vertical Scrolling Shooter'
+		));	
 		
 		
 		DB::table('genre_nes_game')->delete();
@@ -38,36 +56,50 @@ class NesSeeder extends Seeder {
 			'boxart' => true,
 			'description' => 'This game needs a description.'
 		));
+		$_10yardfight->genres()->attach($g_sports->id);
+		$_10yardfight->genres()->attach($g_americanfootball->id);
+		
 		$_1942 = NesGame::create(array(
 			'name' => '1942',
 			'filename' => '1942',
 			'boxart' => true,
 			'description' => 'This game needs a description.'
 		));
+		$_1942->genres()->attach($g_verticalscrollingshooter->id);
+		
 		$_1943 = NesGame::create(array(
 			'name' => '1943: The Battle of Midway',
 			'filename' => '1943',
 			'boxart' => true,
 			'description' => 'This game needs a description.'
 		));
+		$_1943->genres()->attach($g_verticalscrollingshooter->id);
+		
 		$_3dworldrunner = NesGame::create(array(
 			'name' => '3-D WorldRunner',
 			'filename' => '3dworldrunner',
 			'boxart' => true,
 			'description' => 'This game needs a description.'
 		));
+		$_3dworldrunner->genres()->attach($g_thirdpersonshooter->id);
+		
 		$_720 = NesGame::create(array(
 			'name' => '720°',
 			'filename' => '720',
 			'boxart' => true,
 			'description' => 'This game needs a description.'
 		));
+		$_720->genres()->attach($g_skateboarding->id);
+		$_720->genres()->attach($g_sports->id);
+		
 		$_8eyes = NesGame::create(array(
 			'name' => '8 Eye\'s',
 			'filename' => '8eyes',
 			'boxart' => true,
 			'description' => 'This game needs a description.'
 		));
+		$_8eyes->genres()->attach($g_action->id);
+		$_8eyes->genres()->attach($g_platformer->id);
 
 		$_abadox = NesGame::create(array(
 			'name' => 'Abadox',
