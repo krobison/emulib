@@ -15,14 +15,13 @@ class NesSeeder extends Seeder {
     public function run(){
 	
 		DB::table('genres')->delete();
-		Genre::create(array(
-			'name' => 'platformer'
-		));
-		Genre::create(array(
+		
+		$g_adventure = Genre::create(array(
 			'name' => 'adventure'
 		));	
-		$platformer = DB::table('genres')->where('name', 'platformer')->first();
-		$adventure = DB::table('genres')->where('name', 'adventure')->first();
+		$g_platformer = Genre::create(array(
+			'name' => 'platformer'
+		));
 		
 		
 		DB::table('genre_nes_game')->delete();
@@ -715,7 +714,7 @@ class NesSeeder extends Seeder {
 			of previous Mario games by introducing new power-ups used to augment character abilities, establishing several conventions 
 			that have also been featured in later titles of the franchise.<br><br>'
 		));	
-		$_supermarioBros3->genres()->attach($platformer->id);
+		$_supermarioBros3->genres()->attach($g_platformer->id);
 		$_supermarioBros3->ratings()->attach(Rating::create(array('name' => 'Allgame','rating' => '&#9733;&#9733;&#9733;&#9733;&#9733;','class' => 'goodRating'))->id);
 		$_supermarioBros3->ratings()->attach(Rating::create(array('name' => 'Gamespot','rating' => '9.0/10','class' => 'goodRating'))->id);
 		$_supermarioBros3->ratings()->attach(Rating::create(array('name' => 'IGN','rating' => '9.5/10','class' => 'goodRating'))->id);
@@ -808,7 +807,7 @@ class NesSeeder extends Seeder {
 			sales yield, Super Mario Bros. 2 has been considered a classic Super Mario Bros. game worldwide, 
 			including Japan.<br><br>'
 		));	
-		$_supermarioBros2->genres()->attach($platformer->id);
+		$_supermarioBros2->genres()->attach($g_platformer->id);
 		$_supermarioBros2->ratings()->attach(Rating::create(array('name' => 'Allgame','rating' => '&#9733;&#9733;&#9733;&#9733;&#189;','class' => 'goodRating'))->id);
 		$_supermarioBros2->ratings()->attach(Rating::create(array('name' => 'Gamespot','rating' => '8.0/10','class' => 'goodRating'))->id);
 		$_supermarioBros2->ratings()->attach(Rating::create(array('name' => 'IGN','rating' => '8.5/10','class' => 'goodRating'))->id);
