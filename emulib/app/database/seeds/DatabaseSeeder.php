@@ -23,6 +23,8 @@ class NesSeeder extends Seeder {
 		));	
 		$platformer = DB::table('genres')->where('name', 'platformer')->first();
 		$adventure = DB::table('genres')->where('name', 'adventure')->first();
+		
+		
 		DB::table('genre_nes_game')->delete();
 		DB::table('genie_nes_game')->delete();
 		DB::table('nes_game_rating')->delete();
@@ -683,7 +685,7 @@ class NesSeeder extends Seeder {
 
 	
 		//============================================================================================================================
-		$superMarioBros3 = NesGame::create(array(
+		$_supermarioBros3 = NesGame::create(array(
 			'name' => 'Super Mario Bros. 3',
 			'release_japan' => '1988-10-23',
 			'release_pal' => '1991-08-29',
@@ -713,62 +715,62 @@ class NesSeeder extends Seeder {
 			of previous Mario games by introducing new power-ups used to augment character abilities, establishing several conventions 
 			that have also been featured in later titles of the franchise.<br><br>'
 		));	
-		$superMarioBros3->genres()->attach($platformer->id);
-		$superMarioBros3->ratings()->attach(Rating::create(array('name' => 'Allgame','rating' => '&#9733;&#9733;&#9733;&#9733;&#9733;','class' => 'goodRating'))->id);
-		$superMarioBros3->ratings()->attach(Rating::create(array('name' => 'Gamespot','rating' => '9.0/10','class' => 'goodRating'))->id);
-		$superMarioBros3->ratings()->attach(Rating::create(array('name' => 'IGN','rating' => '9.5/10','class' => 'goodRating'))->id);
-		$superMarioBros3->ratings()->attach(Rating::create(array('name' => 'The Video Game Critic','rating' => 'A+','class' => 'goodRating'))->id);
-		$superMarioBros3->screenshots()->attach(Screenshot::create(array('name' => 'On An Airship','description' => 'Bullets everywhere!'))->id);
-		$superMarioBros3->screenshots()->attach(Screenshot::create(array('name' => 'In A Desert Level','description' => 'There are many different environments!'))->id);
-		$superMarioBros3->screenshots()->attach(Screenshot::create(array('name' => 'Mario Underwater','description' => 'Mario using the frog suit powerup for better underwater control.'))->id);
-		$superMarioBros3->screenshots()->attach(Screenshot::create(array('name' => 'World-8 Map','description' => 'Mario on the final world map.'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => NULL,'description' => 'All codes (except as noted) work for Luigi as well as Mario.','twoColumn' => true))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'SLXPLOVS','description' => 'Infinite lives for Mario and Luigi'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'AEKPTZGA','description' => '1 life for Mario and Luigi after continue'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'AEKPTZGE','description' => '9 lives for Mario and Luigi after continue'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'ELKZYVEK','description' => 'Power Jumps'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'EZKZYVEK','description' => 'Super Power Jumps'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'EAKZYVEK','description' => 'Mega Power Jumps'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'GZUXNGEI','description' => 'Multi-Jumps'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => NULL,'description' => 'With the next code, if you let Mario or Luigi drop too long, you can\'t sky walk until you touch the ground again','twoColumn' => true))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'SXEZSKOZ','description' => 'Skywalker'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'SXEZSKOX','description' => 'Skywalker (alt)'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'OXKZELSX','description' => 'Super speed running'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'XVUXNUEE','description' => 'Turbocharged running'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => NULL,'description' => 'You must be Raccoon Mario for the next code to work','twoColumn' => true))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'AANZKLLA','description' => 'Can raise power meter while standing still so that you can fly from a standing start'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'PEUZUGAA','description' => 'Start on World 2'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'ZEUZUGAA','description' => 'Start on World 3'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'LEUZUGAA','description' => 'Start on World 4'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'GEUZUGAA','description' => 'Start on World 5'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'IEUZUGAA','description' => 'Start on World 6'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'TEUZUGAA','description' => 'Start on World 7'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'YEUZUGAA','description' => 'Start on World 8'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'YPXXLVGE','description' => 'Mario (not Luigi) can re-use items again and again'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'SZUEXNSO','description' => 'Restore powers after playing an action scene (e.g. if you were "Fire Mario" on the map screen, then entered an action scene, died or changed to "Frog Mario,"you would return to the map scene as "Fire Mario")'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'ZEUXKGAA','description' => 'Start the game as Fire Mario'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'LEUXKGAA','description' => 'Start the game as Raccoon Mario'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'GEUXKGAA','description' => 'Start the game as Frog Mario'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'IEUXKGAA','description' => 'Start the game as Tanooki Mario'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'TEUXKGAA','description' => 'Start the game as \'Sledgehammer\' Mario!'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => NULL,'description' => 'If you use any of the next five codes to defeat Bowser, stand in front of the door and hold "Up". as soon as the door opens, you will pass through into the chamber where the Princess is held. If you don\'t do this, you may get caught in Bowser\'s time trap and the game will pause forever!','twoColumn' => true))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'XUKXGLIE','description' => 'Start and stay as Super Mario'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'UXKXGLIA','description' => 'Start and stay as Fire Mario'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'NXKXGLIE','description' => 'Start and stay as Raccoon Mario'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'OUKXGLIE','description' => 'Start and stay as Frog Mario'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'XNKXGLIE','description' => 'Start and stay as Sledgehammer Mario'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'SZKIKXSE','description' => 'Invincibility after changing up from Super Mario (e.g. to Raccoon, Frog, etc.)'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => NULL,'description' => 'With all of the following codes, you will find that you change into Super Mario if you die again:','twoColumn' => true))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'AEOSSZPA + PAOZTGAA','description' => 'Change to Super Mario if you fall off screen and die'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'AEOSSZPA + ZAOZTGAA','description' => 'Change to Fire Mario if you fall off screen and die'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'AEOSSZPA + LAOZTGAA','description' => 'Change to Raccoon Mario if you fall off screen and die'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'AEOSSZPA + GAOZTGAA','description' => 'Change to Frog Mario if you fall off screen and die'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'AEOSSZPA + IAOZTGAA','description' => 'Change to Tanooki Mario if you fall off screen and die'))->id);
-		$superMarioBros3->genies()->attach(Genie::create(array('code' => 'AEOSSZPA + TAOZTGAA','description' => 'Change to Sledgehammer Mario if you fall off screen and die'))->id);
+		$_supermarioBros3->genres()->attach($platformer->id);
+		$_supermarioBros3->ratings()->attach(Rating::create(array('name' => 'Allgame','rating' => '&#9733;&#9733;&#9733;&#9733;&#9733;','class' => 'goodRating'))->id);
+		$_supermarioBros3->ratings()->attach(Rating::create(array('name' => 'Gamespot','rating' => '9.0/10','class' => 'goodRating'))->id);
+		$_supermarioBros3->ratings()->attach(Rating::create(array('name' => 'IGN','rating' => '9.5/10','class' => 'goodRating'))->id);
+		$_supermarioBros3->ratings()->attach(Rating::create(array('name' => 'The Video Game Critic','rating' => 'A+','class' => 'goodRating'))->id);
+		$_supermarioBros3->screenshots()->attach(Screenshot::create(array('name' => 'On An Airship','description' => 'Bullets everywhere!'))->id);
+		$_supermarioBros3->screenshots()->attach(Screenshot::create(array('name' => 'In A Desert Level','description' => 'There are many different environments!'))->id);
+		$_supermarioBros3->screenshots()->attach(Screenshot::create(array('name' => 'Mario Underwater','description' => 'Mario using the frog suit powerup for better underwater control.'))->id);
+		$_supermarioBros3->screenshots()->attach(Screenshot::create(array('name' => 'World-8 Map','description' => 'Mario on the final world map.'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => NULL,'description' => 'All codes (except as noted) work for Luigi as well as Mario.','twoColumn' => true))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'SLXPLOVS','description' => 'Infinite lives for Mario and Luigi'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'AEKPTZGA','description' => '1 life for Mario and Luigi after continue'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'AEKPTZGE','description' => '9 lives for Mario and Luigi after continue'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'ELKZYVEK','description' => 'Power Jumps'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'EZKZYVEK','description' => 'Super Power Jumps'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'EAKZYVEK','description' => 'Mega Power Jumps'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'GZUXNGEI','description' => 'Multi-Jumps'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => NULL,'description' => 'With the next code, if you let Mario or Luigi drop too long, you can\'t sky walk until you touch the ground again','twoColumn' => true))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'SXEZSKOZ','description' => 'Skywalker'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'SXEZSKOX','description' => 'Skywalker (alt)'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'OXKZELSX','description' => 'Super speed running'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'XVUXNUEE','description' => 'Turbocharged running'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => NULL,'description' => 'You must be Raccoon Mario for the next code to work','twoColumn' => true))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'AANZKLLA','description' => 'Can raise power meter while standing still so that you can fly from a standing start'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'PEUZUGAA','description' => 'Start on World 2'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'ZEUZUGAA','description' => 'Start on World 3'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'LEUZUGAA','description' => 'Start on World 4'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'GEUZUGAA','description' => 'Start on World 5'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'IEUZUGAA','description' => 'Start on World 6'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'TEUZUGAA','description' => 'Start on World 7'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'YEUZUGAA','description' => 'Start on World 8'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'YPXXLVGE','description' => 'Mario (not Luigi) can re-use items again and again'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'SZUEXNSO','description' => 'Restore powers after playing an action scene (e.g. if you were "Fire Mario" on the map screen, then entered an action scene, died or changed to "Frog Mario,"you would return to the map scene as "Fire Mario")'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'ZEUXKGAA','description' => 'Start the game as Fire Mario'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'LEUXKGAA','description' => 'Start the game as Raccoon Mario'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'GEUXKGAA','description' => 'Start the game as Frog Mario'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'IEUXKGAA','description' => 'Start the game as Tanooki Mario'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'TEUXKGAA','description' => 'Start the game as \'Sledgehammer\' Mario!'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => NULL,'description' => 'If you use any of the next five codes to defeat Bowser, stand in front of the door and hold "Up". as soon as the door opens, you will pass through into the chamber where the Princess is held. If you don\'t do this, you may get caught in Bowser\'s time trap and the game will pause forever!','twoColumn' => true))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'XUKXGLIE','description' => 'Start and stay as Super Mario'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'UXKXGLIA','description' => 'Start and stay as Fire Mario'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'NXKXGLIE','description' => 'Start and stay as Raccoon Mario'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'OUKXGLIE','description' => 'Start and stay as Frog Mario'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'XNKXGLIE','description' => 'Start and stay as Sledgehammer Mario'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'SZKIKXSE','description' => 'Invincibility after changing up from Super Mario (e.g. to Raccoon, Frog, etc.)'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => NULL,'description' => 'With all of the following codes, you will find that you change into Super Mario if you die again:','twoColumn' => true))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'AEOSSZPA + PAOZTGAA','description' => 'Change to Super Mario if you fall off screen and die'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'AEOSSZPA + ZAOZTGAA','description' => 'Change to Fire Mario if you fall off screen and die'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'AEOSSZPA + LAOZTGAA','description' => 'Change to Raccoon Mario if you fall off screen and die'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'AEOSSZPA + GAOZTGAA','description' => 'Change to Frog Mario if you fall off screen and die'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'AEOSSZPA + IAOZTGAA','description' => 'Change to Tanooki Mario if you fall off screen and die'))->id);
+		$_supermarioBros3->genies()->attach(Genie::create(array('code' => 'AEOSSZPA + TAOZTGAA','description' => 'Change to Sledgehammer Mario if you fall off screen and die'))->id);
 		//============================================================================================================================
 		
 		//============================================================================================================================
-		$superMarioBros2 = NesGame::create(array(
+		$_supermarioBros2 = NesGame::create(array(
 			'name' => 'Super Mario Bros. 2',
 			'release_japan' => '1992-09-14',
 			'release_pal' => '1989-04-14',
@@ -806,14 +808,14 @@ class NesSeeder extends Seeder {
 			sales yield, Super Mario Bros. 2 has been considered a classic Super Mario Bros. game worldwide, 
 			including Japan.<br><br>'
 		));	
-		$superMarioBros2->genres()->attach($platformer->id);
-		$superMarioBros2->ratings()->attach(Rating::create(array('name' => 'Allgame','rating' => '&#9733;&#9733;&#9733;&#9733;&#189;','class' => 'goodRating'))->id);
-		$superMarioBros2->ratings()->attach(Rating::create(array('name' => 'Gamespot','rating' => '8.0/10','class' => 'goodRating'))->id);
-		$superMarioBros2->ratings()->attach(Rating::create(array('name' => 'IGN','rating' => '8.5/10','class' => 'goodRating'))->id);
-		$superMarioBros2->ratings()->attach(Rating::create(array('name' => 'The Video Game Critic','rating' => 'A-','class' => 'goodRating'))->id);
-		$superMarioBros2->screenshots()->attach(Screenshot::create(array('name' => 'Brand New POW Block','description' => 'For those pesky enemies!'))->id);
-		$superMarioBros2->screenshots()->attach(Screenshot::create(array('name' => 'Play As Peach!','description' => 'There are several characters to choose from.'))->id);
-		$superMarioBros2->screenshots()->attach(Screenshot::create(array('name' => 'Fight some crazy egg-spitting guy!','description' => 'Seriously. It\'s a guy. Read the manual.'))->id);
+		$_supermarioBros2->genres()->attach($platformer->id);
+		$_supermarioBros2->ratings()->attach(Rating::create(array('name' => 'Allgame','rating' => '&#9733;&#9733;&#9733;&#9733;&#189;','class' => 'goodRating'))->id);
+		$_supermarioBros2->ratings()->attach(Rating::create(array('name' => 'Gamespot','rating' => '8.0/10','class' => 'goodRating'))->id);
+		$_supermarioBros2->ratings()->attach(Rating::create(array('name' => 'IGN','rating' => '8.5/10','class' => 'goodRating'))->id);
+		$_supermarioBros2->ratings()->attach(Rating::create(array('name' => 'The Video Game Critic','rating' => 'A-','class' => 'goodRating'))->id);
+		$_supermarioBros2->screenshots()->attach(Screenshot::create(array('name' => 'Brand New POW Block','description' => 'For those pesky enemies!'))->id);
+		$_supermarioBros2->screenshots()->attach(Screenshot::create(array('name' => 'Play As Peach!','description' => 'There are several characters to choose from.'))->id);
+		$_supermarioBros2->screenshots()->attach(Screenshot::create(array('name' => 'Fight some crazy egg-spitting guy!','description' => 'Seriously. It\'s a guy. Read the manual.'))->id);
 		//============================================================================================================================
     }
 
