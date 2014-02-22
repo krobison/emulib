@@ -326,6 +326,360 @@ class NesSeeder extends Seeder {
 			'boxart' => false,
 			'description' => 'This game needs a description'
 		));
+		NesGame::create(array(
+			'name' => 'Back to the Future',
+			'filename' => 'backtothefuture',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Back to the Future Part II & III',
+			'filename' => 'backtothefuturepart2and3',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Bad Dudes (Vs. DragonNinja)',
+			'filename' => 'baddudesvsdragonninja',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Bad News Baseball',
+			'filename' => 'badnewsbaseball',
+			'boxart' => false,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Bad Street Brawler',
+			'filename' => 'badstreetbrawler',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Balloon Fight',
+			'filename' => 'balloonfight',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Banana Prince',
+			'filename' => 'bananaprince',
+			'boxart' => false,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Bandai Golf: Challenge Pebble Beach',
+			'filename' => 'bandaigolfchallengepebblebeach',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Bandit Kings of Ancient China',
+			'filename' => 'banditkingsofancientchina',
+			'boxart' => false,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Barbie',
+			'filename' => 'barbie',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'The Bard\'s Tale',
+			'filename' => 'thebardstale',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Barker Bill\'s Trick Shooting',
+			'filename' => 'barkerbillstrickshooting',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Base Wars',
+			'filename' => 'basewars',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Baseball',
+			'filename' => 'baseball',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Baseball Simulator 1.000',
+			'filename' => 'baseballsimulator1000',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Baseball Stars',
+			'filename' => 'baseballstars',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Baseball Stars II',
+			'filename' => 'baseballstars2',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Bases Loaded',
+			'filename' => 'basesloaded',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Bases Loaded II: Second Season',
+			'filename' => 'basesloaded2secondseason',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Bases Loaded 3',
+			'filename' => 'basesloaded3',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Bases Loaded 4',
+			'filename' => 'basesloaded4',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Batman',
+			'filename' => 'batman',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Batman Returns',
+			'filename' => 'batmanreturns',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Batman: Return of the Joker',
+			'filename' => 'batmanreturnofthejoker',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Battle Chess',
+			'filename' => 'battlechess',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'The Battle of Olympus',
+			'filename' => 'thebattleofolympus',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Battle Tank',
+			'filename' => 'battletank',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Battleship',
+			'filename' => 'battleship',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Battletoads',
+			'filename' => 'battletoads',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Battletoads & Double Dragon',
+			'filename' => 'battletoadsanddoubledragon',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Beetlejuice',
+			'filename' => 'beetlejuice',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Best of the Best: Championship Karate',
+			'filename' => 'bestofthebestchampionshipkarate',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Bigfoot',
+			'filename' => 'bigfoot',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Bible Adventures',
+			'filename' => 'bibleadventures',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Bill & Ted\'s Excellent Video Game Adventure',
+			'filename' => 'billandtedsexcellentvideogameadventure',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Bill Elliot\'s NASCAR Challenge',
+			'filename' => 'billelliotsnascarchallenge',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Bionic Commando',
+			'filename' => 'bioniccommando',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'The Black Bass',
+			'filename' => 'theblackbass',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Blades of Steel',
+			'filename' => 'bladesofsteel',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Blaster Master',
+			'filename' => 'blastermaster',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'The Blue Marlin',
+			'filename' => 'thebluemarlin',
+			'boxart' => false,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'The Blues Brothers',
+			'filename' => 'thebluesbrothers',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Bo Jackson Baseball',
+			'filename' => 'bojacksonbaseball',
+			'boxart' => false,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Bomberman',
+			'filename' => 'bomberman',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Bomberman II',
+			'filename' => 'bomberman2',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Bonk\'s Adventure',
+			'filename' => 'bonksadventure',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Boulder Dash',
+			'filename' => 'boulderdash',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'A Boy and His Blob: Trouble on Blobolonia',
+			'filename' => 'aboyandhisblobtroubleonblobolonia',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Bram Stoker\'s Dracula',
+			'filename' => 'bramstokersdracula',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Break Time: The National Pool Tour',
+			'filename' => 'breaktimethenationalpooltour',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'BreakThru',
+			'filename' => 'breakthru',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Bubble Bobble',
+			'filename' => 'bubblebobble',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Bubble Bobble Part 2',
+			'filename' => 'bubblebobblepart2',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Bucky O\'Hare',
+			'filename' => 'buckyohare',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'The Bugs Bunny Birthday Blowout',
+			'filename' => 'thebugsbunnybirthdayblowout',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'The Bugs Bunny Crazy Castle',
+			'filename' => 'thebugsbunnycrazycastle',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Bump \'n\' Jump',
+			'filename' => 'bumpnjump',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'Burai Fighter',
+			'filename' => 'buraifighter',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
+		NesGame::create(array(
+			'name' => 'BurgerTime',
+			'filename' => 'burgertime',
+			'boxart' => true,
+			'description' => 'This game needs a description'
+		));
 
 	
 		//============================================================================================================================
