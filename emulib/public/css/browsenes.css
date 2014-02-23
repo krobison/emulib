@@ -1,0 +1,54 @@
+
+#browse_reader{
+	margin-left:320px;
+	margin-right:32px;
+	padding:8px;
+}
+
+.thumbnail{
+	width:100%;
+	margin:0px;
+}
+
+.caption{
+	height:32px;
+	overflow-y:hidden;
+}
+
+.holdy{
+	display:inline-block;
+	width:100%;
+}
+
+.thumbnailc{
+	height:286px;
+	overflow-y:hidden;
+}
+
+.minirow{
+	width:64px;
+}
+
+.genrebox{
+	width:300px;
+	height:256;
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+
+#searchexp{
+	cursor:pointer;
+	width:256px;
+}
+
+#browse_reader_side{
+	margin-left:32px;
+	width:256px;
+	padding:8px;
+	margin-top:172px;
+}
+
+.searchlabel{
+	display:block;
+	margin-bottom:8px;
+}

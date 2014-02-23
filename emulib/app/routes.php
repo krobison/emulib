@@ -18,6 +18,10 @@ Route::get('invertNavbar', 'ThemeController@invertNavbar');
 Route::get('uninvertNavbar', 'ThemeController@uninvertNavbar');
 Route::get('theme{theme}', 'ThemeController@changeTheme');
 
+Route::get('browse','LibraryController@browse');
+
 Route::get('nes_library','LibraryController@showNes');
+Route::get('nes_library_{show}','LibraryController@showNes');
+Route::post('nes_filter_library_{show}','LibraryController@showNesFilter');
 
 Route::get('nes/{id}','GameController@showNes');

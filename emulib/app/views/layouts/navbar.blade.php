@@ -1,9 +1,9 @@
 	
-		@if ($inverted == 'true')
-			<nav class="navbar navbar-inverse" role="navigation">
-		@else
-			<nav class="navbar navbar-default" role="navigation">
-		@endif
+@if ($inverted == 'true')
+	<nav class="navbar navbar-inverse" role="navigation">
+@else
+	<nav class="navbar navbar-default" role="navigation">
+@endif
 		
 	  <div class="container-fluid">
 		<div class="navbar-header">
@@ -13,14 +13,14 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-		  <a class="navbar-brand" href="#" style="margin-left:16px;">EmuLib</a>
+		  <a class="navbar-brand" href={{url("")}} style="margin-left:16px;">EmuLib</a>
 		</div>
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-				<li><a href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Home</a></li>
+				<li><a href={{url("")}}><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Home</a></li>
 				<li><a href="#"><span class="glyphicon glyphicon-comment"></span>&nbsp;&nbsp;News</a></li>
-				<li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;Browse</a></li>
+				<li><a href={{url("browse")}}><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;Browse</a></li>
 				<li><a href="#"><span class="glyphicon glyphicon-question-sign"></span>&nbsp;&nbsp;About</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">

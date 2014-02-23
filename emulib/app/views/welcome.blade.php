@@ -5,5 +5,5 @@ EmuLib: Welcome!
 @endsection
 
 @section('content')
-{{link_to("nes_library")}}
+<h1>Welcome to Emulib Dude</h1>
 @endsection
