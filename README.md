@@ -13,6 +13,7 @@
 * native rating system / review system
 * pretty landing page
 * users
+* make the sprites on the list page just cideo game sprites or blank/some DIFFERENT generic sprite. Use the NES controller for the individual view still, and use game controllers in the list of ALL games to differentiate between consols
 
 
 ###Stubs:
