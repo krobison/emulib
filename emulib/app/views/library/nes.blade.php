@@ -14,28 +14,51 @@ EmuLib: NES Library
 		<h4>Display </h4>
 		<hr>
 		<div class="btn-toolbar" role="toolbar">
-			<form action={{url("nes_library_list")}}>
-				<span class="glyphicon glyphicon-list-alt"> List:&nbsp;</span>
+			<form action={{url("nes_library_list")}} class="viewbuttonform">
+				<span class="glyphicon glyphicon-list-alt"> List:</span>
 				@if ($view == 'list')
 					<button type="submit" class="btn btn-xs btn-success active">List</button>
 				@else
 					<button type="submit" class="btn btn-xs btn-info">List</button>
 				@endif
 			</form>
-			<form action={{url("nes_library_boxart")}}>
-				<span class="glyphicon glyphicon-th"> Boxart:&nbsp;</span>
+			<br>
+			<form action={{url("nes_library_boxart")}} class="viewbuttonform">
+				<span class="glyphicon glyphicon-th"> Boxart:</span>
 				@if ($view == 'boxart')
-					<button type="submit" class="btn btn-xs btn-success active" href={{url("nes_library_list")}}>Full</button>
+					<button type="submit" class="btn btn-xs btn-success active">Full</button>
 				@else
-					<button type="submit" class="btn btn-xs btn-info" href={{url("nes_library_list")}}>Full</button>
+					<button type="submit" class="btn btn-xs btn-info">Full</button>
 				@endif
 			</form>
-			<form action={{url("nes_library_cartridge")}}>
-				<span class="glyphicon glyphicon-stop"> Cartridge:&nbsp;</span>
-				@if ($view == 'cartridge')
-					<button type="submit" class="btn btn-xs btn-success active" href={{url("nes_library_list")}}>Front</button>
+			<form action={{url("nes_library_boxfront")}} class="viewbuttonform">
+				@if ($view == 'boxfront')
+					<button type="submit" class="btn btn-xs btn-success active">Front</button>
 				@else
-					<button type="submit" class="btn btn-xs btn-info" href={{url("nes_library_list")}}>Front</button>
+					<button type="submit" class="btn btn-xs btn-info">Front</button>
+				@endif
+			</form>
+			<form action={{url("nes_library_boxside")}} class="viewbuttonform">
+				@if ($view == 'boxside')
+					<button type="submit" class="btn btn-xs btn-success active">Side</button>
+				@else
+					<button type="submit" class="btn btn-xs btn-info">Side</button>
+				@endif
+			</form>
+			<form action={{url("nes_library_boxback")}} class="viewbuttonform">
+				@if ($view == 'boxback')
+					<button type="submit" class="btn btn-xs btn-success active">Back</button>
+				@else
+					<button type="submit" class="btn btn-xs btn-info">Back</button>
+				@endif
+			</form>
+			<br>
+			<form action={{url("nes_library_cartridge")}} class="viewbuttonform">
+				<span class="glyphicon glyphicon-stop"> Cartridge:</span>
+				@if ($view == 'cartridge')
+					<button type="submit" class="btn btn-xs btn-success active">Front</button>
+				@else
+					<button type="submit" class="btn btn-xs btn-info">Front</button>
 				@endif
 			</form>
 		</div>
@@ -97,6 +120,44 @@ EmuLib: NES Library
 							<img src={{asset('img/nes_boxart/thumb/default.png')}} />
 						@endif
 							<div class="caption">{{$game->name}}</div>
+					</a>
+				</div>
+			@endforeach
+		@elseif ($view == 'boxfront')
+			@foreach ($games as $game)
+				<div class="col-xs-6 col-md-2">
+					<a class="thumbnail" href={{url('nes/'.$game->id)}}>
+						@if ($game->boxart)
+							<img src={{asset('img/nes_boxart/front/'.$game->filename.'.png')}} />
+						@else
+							<img src={{asset('img/nes_boxart/front/default.png')}} />
+						@endif
+							<div class="caption">{{$game->name}}</div>
+					</a>
+				</div>
+			@endforeach
+		@elseif ($view == 'boxback')
+			@foreach ($games as $game)
+				<div class="col-xs-6 col-md-2">
+					<a class="thumbnail" href={{url('nes/'.$game->id)}}>
+						@if ($game->boxart)
+							<img src={{asset('img/nes_boxart/back/'.$game->filename.'.png')}} />
+						@else
+							<img src={{asset('img/nes_boxart/back/default.png')}} />
+						@endif
+							<div class="caption">{{$game->name}}</div>
+					</a>
+				</div>
+			@endforeach
+		@elseif ($view == 'boxside')
+			@foreach ($games as $game)
+				<div class="col-xs-6 col-md-1">
+					<a class="thumbnail" href={{url('nes/'.$game->id)}}>
+						@if ($game->boxart)
+							<img src={{asset('img/nes_boxart/side/'.$game->filename.'.jpg')}} />
+						@else
+							<img src={{asset('img/nes_boxart/side/default.jpg')}} />
+						@endif
 					</a>
 				</div>
 			@endforeach
