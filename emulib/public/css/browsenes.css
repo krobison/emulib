@@ -30,22 +30,23 @@
 }
 
 .genrebox{
-	width:300px;
+	width:238px;
 	height:256;
 	overflow-x:hidden;
 	overflow-y:auto;
-}
-
-#searchexp{
-	cursor:pointer;
-	width:256px;
 }
 
 #browse_reader_side{
 	margin-left:32px;
 	width:256px;
 	padding:8px;
-	margin-top:172px;
+}
+
+#browse_reader_side_filter{
+	margin-left:32px;
+	width:256px;
+	padding:8px;
+	margin-top:216px;
 }
 
 .searchlabel{

@@ -9,68 +9,71 @@ EmuLib: NES Library
 @section('content')
 
 	@include('layouts.breadcrumb')
-	@include('layouts.sidebar')
 	
 	<div class="panel panel-default" id="browse_reader_side" data-spy="affix" data-offset-top="0">
 		<h4>Display </h4>
 		<hr>
 		<div class="btn-toolbar" role="toolbar">
 			<form action={{url("nes_library_list")}}>
+				<span class="glyphicon glyphicon-list-alt"> List:&nbsp;</span>
 				@if ($view == 'list')
-					<button type="submit" class="btn btn-success active"><span class="glyphicon glyphicon-list-alt"> List</span></button>
+					<button type="submit" class="btn btn-xs btn-success active">List</button>
 				@else
-					<button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-list-alt"> List</span></button>
+					<button type="submit" class="btn btn-xs btn-info">List</button>
 				@endif
 			</form>
 			<form action={{url("nes_library_boxart")}}>
+				<span class="glyphicon glyphicon-th"> Boxart:&nbsp;</span>
 				@if ($view == 'boxart')
-					<button type="submit" class="btn btn-success active" href={{url("nes_library_list")}}><span class="glyphicon glyphicon-th"> Boxart</span></button>
+					<button type="submit" class="btn btn-xs btn-success active" href={{url("nes_library_list")}}>Full</button>
 				@else
-					<button type="submit" class="btn btn-info" href={{url("nes_library_list")}}><span class="glyphicon glyphicon-th"> Boxart</span></button>
+					<button type="submit" class="btn btn-xs btn-info" href={{url("nes_library_list")}}>Full</button>
 				@endif
 			</form>
 			<form action={{url("nes_library_cartridge")}}>
+				<span class="glyphicon glyphicon-stop"> Cartridge:&nbsp;</span>
 				@if ($view == 'cartridge')
-					<button type="submit" class="btn btn-success active" href={{url("nes_library_list")}}><span class="glyphicon glyphicon-stop"> Cartridge</span></button>
+					<button type="submit" class="btn btn-xs btn-success active" href={{url("nes_library_list")}}>Front</button>
 				@else
-					<button type="submit" class="btn btn-info" href={{url("nes_library_list")}}><span class="glyphicon glyphicon-stop"> Cartridge</span></button>
+					<button type="submit" class="btn btn-xs btn-info" href={{url("nes_library_list")}}>Front</button>
 				@endif
 			</form>
 		</div>
 	</div>
-
-	<div class="panel panel-default" id="browse_reader">
-		<h4 id="searchexp">Filter (Click to Expand)</h4>
-			<div id="searchable">
-				<form method="POST" action={{url("nes_filter_library_{$view}")}}>
-					<span class="searchlabel">Genre</span>
-					<div class="panel panel-info genrebox">
-							<div class="input-group">
-								<span class="input-group-addon">
-									@if (in_array("All",$search_genre))
-										<input type="checkbox" class="genreselectall" checked>
-									@else
-										<input type="checkbox" class="genreselectall">
-									@endif
-								</span>
-								<input type="text" value='All' class="form-control" disabled>
-							</div>
-						@foreach ($genres as $genre)
-							<div class="input-group">
-								<span class="input-group-addon">
-									@if (!in_array("All",$search_genre) && in_array($genre->name,$search_genre) )
-										<input type="checkbox" name="genre_{{$genre->name}}" class="genreselect" checked>
-									@else
-										<input type="checkbox" name="genre_{{$genre->name}}" class="genreselect">
-									@endif
-								</span>
-									<input type="text" value='{{$genre->name}}' class="form-control" disabled>
-							</div>
-						@endforeach
-					</div>
-				<button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-search"> Filter</span></button>
-				</form>
-			</div>
+	
+	<div class="panel panel-default" id="browse_reader_side_filter" data-spy="affix" data-offset-top="0">
+		<h4 id="searchexp">Filter</h4>
+		<hr>
+		<div id="searchable">
+			<form method="POST" action={{url("nes_filter_library_{$view}")}}>
+				<span class="searchlabel">Genre</span>
+				<div class="panel panel-info genrebox">
+						<div class="input-group">
+							<span class="input-group-addon">
+								@if (in_array("All",$search_genre))
+									<input type="checkbox" class="genreselectall" checked>
+								@else
+									<input type="checkbox" class="genreselectall">
+								@endif
+							</span>
+							<input type="text" value='All' class="form-control" disabled>
+						</div>
+					@foreach ($genres as $genre)
+						<div class="input-group">
+							<span class="input-group-addon">
+								@if (!in_array("All",$search_genre) && in_array($genre->name,$search_genre) )
+									<input type="checkbox" name="genre_{{$genre->name}}" class="genreselect" checked>
+								@else
+									<input type="checkbox" name="genre_{{$genre->name}}" class="genreselect">
+								@endif
+							</span>
+								<input type="text" value='{{$genre->name}}' class="form-control" disabled>
+						</div>
+					@endforeach
+				</div>
+			<button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-search"> Filter</span></button>
+			</form>
+		</div>
 	</div>
 	
 	<div class="panel panel-default" id="browse_reader">
@@ -113,32 +116,6 @@ EmuLib: NES Library
 		@endif
 		</div>
 	</div>
-	
-	
-	<script>
-		$("#searchexp").click(function(){
-			$("#searchable").slideToggle(200);
-			
-			var genietext = $( "#searchexp" ).text();
-			
-			if (genietext == "Filter (Click to Expand)"){
-				$('html, body').animate({
-					scrollTop: $("#searchable").offset().top - 150
-				}, 200);
-				
-				$("#searchexp").text("Filter (Click to Hide)");
-			}else{
-				$("#searchexp").text("Filter (Click to Expand)");
-				$('html, body').animate({
-					scrollTop: $("#searchable").offset().top-200
-				}, 200);
-			}
-			
-		});
-		$(document).ready(function() {
-			$("#searchable").hide();
-		});
-	</script>
 	
 	<script>
 		//disable scrolling page if scrolling in genrebox
