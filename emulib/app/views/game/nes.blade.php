@@ -10,7 +10,6 @@ EmuLib: {{$game->name}}
 @section('content')
 
 	@include('layouts.breadcrumb')
-	@include('layouts.sidebar')
 
     <div class="panel panel-default" id="gamepanel">
 		<div class="panel-body">

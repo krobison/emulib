@@ -9,11 +9,10 @@ EmuLib: Browse
 @section('content')
 	
 	@include('layouts.breadcrumb')
-	@include('layouts.sidebar')
 
 	<div class="panel panel-default" id="browse_reader">
 		<div class="row">
-		  <div class="col-sm-6 col-md-4">
+		  <div class="col-sm-6 col-md-3">
 			<div class="thumbnail">
 			  <img src={{asset('img/library/nes.png')}} alt="Nes games">
 			  <div class="caption">
