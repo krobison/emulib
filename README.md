@@ -14,6 +14,7 @@
 * pretty landing page
 * users
 * make the sprites on the list page just cideo game sprites or blank/some DIFFERENT generic sprite. Use the NES controller for the individual view still, and use game controllers in the list of ALL games to differentiate between consols
+* Make the NSTC/other region option for games by adding a new side panel to the game view and some (maybe lots) new fields to the games in database
 
 
 ###Stubs:
