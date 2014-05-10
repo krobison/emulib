@@ -2,9 +2,9 @@
 
 class LibraryController extends BaseController {
 
-	public function showNes($show = "list"){
-		$nesgames = NesGame::all()->sortBy('name');
-		$genres = Genre::all()->sortBy('name');
+	public function showNes($show = "list",$order = "name"){
+		$nesgames = NesGame::all()->sortBy($order);
+		$genres = Genre::all()->sortBy($order);
 		$search_genre = array("All"); 
 		return View::make("library.nes")->with('games',$nesgames)->with('genres',$genres)->with('lib_nes',true)->with('view',$show)->with('search_genre',$search_genre);
 	}

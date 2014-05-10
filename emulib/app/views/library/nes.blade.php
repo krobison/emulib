@@ -5,9 +5,13 @@ EmuLib: NES Library
 @endsection
 
 {{HTML::style('css/browsenes.css')}}
+{{HTML::style('css/tablesorter_blue/style.css')}}
 
 @section('content')
 
+	<!-- Include table sorter -->
+	{{HTML::script('js/__jquery.tablesorter/jquery.tablesorter.js');}}
+	
 	@include('layouts.breadcrumb')
 	
 	<div class="panel panel-default" id="browse_reader_side" data-spy="affix" data-offset-top="0">
@@ -102,13 +106,43 @@ EmuLib: NES Library
 	<div class="panel panel-default" id="browse_reader">
 		<div class="holdy">
 		@if ($view == 'list')
-			<table class="table table-striped">
-			@foreach ($games as $game)
-				<tr>
-					<td class="minirow"><img class="header_thumb" src={{asset('img/nes_sprite/default.png')}} /></td>
-					<td>{{link_to('nes/'.$game->id,$game->name)}}</td>
-				</tr>
-			@endforeach
+			<table class="table table-striped tablesorter" id="listTable">
+				<thead>
+					<th>System</th>
+					<th><span></span>Name</th>
+					<th>Review (Gamespot)</th>
+					<th>Release (North America)</th>
+					<th>Genre</th>
+					<th>ESRB</th>
+				</thead>
+				<tbody>
+					@foreach ($games as $game)
+						<tr>
+							<td class="minirow"><img class="header_thumb" src={{asset('img/nes_sprite/default.png')}} /></td>
+							<td>{{link_to('nes/'.$game->id,$game->name)}}</td>
+							<td>
+								@foreach ($game->ratings()->get() as $rating)
+									@if ($rating->name == "Gamespot")
+										{{$rating->rating}}
+									@endif
+								@endforeach
+							</td>
+							<td>{{$game->release_usa}}</td>
+							<td>
+								@foreach ($game->genres()->get() as $genre)
+									{{$genre->name}}<br>
+								@endforeach
+							</td>
+							<td>
+								@if ($game->esrb)
+									<img class="ratings" src={{asset('img/ratings/'.$game->esrb)}} style="width:32px;"/>
+									<!-- for sorting -->
+									<span style="display:none">{{$game->esrb}}</span>
+								@endif
+							</td>
+						</tr>
+					@endforeach
+				</tbody>
 			</table>
 		@elseif ($view == 'boxart')
 			@foreach ($games as $game)
@@ -187,6 +221,11 @@ EmuLib: NES Library
 			this.scrollTop += ( delta < 0 ? 1 : -1 ) * 120;
 			e.preventDefault();
 		});
+		
+		//sort the table for list view
+		$(document).ready(function() { 
+			$("#listTable").tablesorter(); 
+		}); 
 	
 	</script>
 	
