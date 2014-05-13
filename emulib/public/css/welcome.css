@@ -1,0 +1,11 @@
+.welcomer{
+	text-align:center;
+	min-height: 85%;
+	height: auto !important;
+	height: 85%;
+	margin: 0 auto -16px;
+}
+
+.footer{
+	text-align:center;
+}
